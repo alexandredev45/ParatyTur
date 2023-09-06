@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
+:root{
+    --azul02:    #07689f;
+    --amarelo02: #facf39;
+    --branco:    #ffffff;
+    --azul01:    #0988d0;
+    --azul03:    #05486e;
+    --amarelo01: #fbfb6b;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--azul01);
+    color: white;
+    padding: 0.5rem;
+}
+
+.logo img{
+    width: 40px;
+    margin-left: 2rem;
+}
+
+.menu-list {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.menu-list li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.25rem;
+    font-weight: bolder;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.line {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin: 3px 0;
+}
+
+@media screen and (max-width: 768px) {
+    .menu-list {
+        display: none;
+        flex-direction: column;
+        background-color: var(--azul01);
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        z-index: 1;
+        padding: 1rem;
+        margin-top: -1px;
+    }
+    
+    .menu-list.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}

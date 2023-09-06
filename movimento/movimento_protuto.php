@@ -4,7 +4,7 @@
     $nome          = $_POST['nome'];
     $valor         = $_POST['valor'];
     $quantidade    = $_POST['quantidade'];
-    $obs       = $_POST['obs'];
+    $obs           = $_POST['obs'];
 
 try{    
     $comando = $conexao->prepare('INSERT INTO produto(nome, valor, quantidade, obs) VALUES(:nome, :valor, :quantidade, :obs)');

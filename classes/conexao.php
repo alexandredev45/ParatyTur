@@ -1,6 +1,6 @@
 <?php
-	$host = "mysql:host=;dbname=";
-	$user = "";
+	$host = "mysql:host=localhost;dbname=paratyTur";
+	$user = "root";
 	$senha = "";
 	
 try{

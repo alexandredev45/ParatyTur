@@ -13,22 +13,22 @@
     <div class="container mt-5">
         <h1>Cadastro de Produto</h1>
         <!--Action pra passar caminho da pasta movimento-->
-        <form action="movimento/teste.php" method="post">
+        <form action="movimento/movimento_protuto.php" method="post">
             <div class="mb-3">
                 <label for="nome" class="form-label">Nome do Produto</label>
-                <input type="text" class="form-control" id="nome" placeholder="Digite o nome do produto">
+                <input type="text" class="form-control" id="nome" name="nome" placeholder="Digite o nome do produto">
             </div>
             <div class="mb-3">
                 <label for="preco" class="form-label">Valor do Produto</label>
-                <input type="text" class="form-control" id="valor" placeholder="Digite o preço do produto">
+                <input type="text" class="form-control" id="valor" name="valor" placeholder="Digite o preço do produto">
             </div>
             <div class="mb-3">
                 <label for="estoque" class="form-label">Quantidade</label>
-                <input type="number" class="form-control" id="quantidade" placeholder="Digite a quantidade em estoque">
+                <input type="number" class="form-control" id="quantidade" name="quantidade" placeholder="Digite a quantidade em estoque">
             </div>
             <div class="mb-3">
                 <label for="descricao" class="form-label">Obs:</label>
-                <textarea class="form-control" id="obs" rows="3" placeholder="Digite a descrição do produto"></textarea>
+                <textarea class="form-control" id="obs" name="obs" rows="3" placeholder="Digite a descrição do produto"></textarea>
             </div>
             
             

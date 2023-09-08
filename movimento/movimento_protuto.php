@@ -1,5 +1,46 @@
 <?php
-    include_once("../classes/conexao.php");
+
+  include_once "../classes/conexao.php";
+
+  if(isset($_POST['nome'])){
+    $sql = $pdo->prepare("INSERT INTO produto VALUES (null,?,?)");
+    $sql->execute(array($_POST['nome'], $_POST['valor'],));
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ /*   include_once("../classes/conexao.php");
 
     $nome          = $_POST['nome'];
     $valor         = $_POST['valor'];
@@ -31,6 +72,6 @@ $cont = $comando->rowCount();
      } 
 
 
-/* ******************************************************************************************************************************************************/
+ ******************************************************************************************************************************************************/
 
 ?>

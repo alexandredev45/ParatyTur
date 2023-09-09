@@ -24,7 +24,5 @@
         } 
 
     }
-
-
-    $pdo->query("INSERT INTO produto(nome, valor, quantidade, obs) VALUES ('bolo', '10', '22', 'lll')");
+    
 ?>

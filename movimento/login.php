@@ -9,7 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if ($username === 'usuario' && $password === 'senha') {
         // Credenciais corretas, redirecionando para outra página.
-        header("Location: index.html");
+        header("Location: index.html"); //Caso esteja tudo certo, redireciona para index.html
         exit();
     } else {
         // Caso credenciais inválidas, exiba uma mensagem de erro.

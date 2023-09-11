@@ -26,7 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($conexao->query($mysql) === TRUE) {
         // Credenciais inseridas com sucesso.
         echo "Registro inserido com sucesso.";
-        //header("Location: tela_adm.html"); // Caso esteja tudo certo, redireciona para index.html
+        //header("Location: tela_adm.html"); // Caso esteja tudo certo, redireciona para tela_adm.html
         exit();
     } else {
         // Caso ocorra algum erro ao inserir as credenciais, exiba uma mensagem de erro.

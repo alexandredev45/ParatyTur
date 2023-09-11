@@ -5,7 +5,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $host = "localhost";
     $user = "root";
-    $senha = " ";
+    $senha = "";
     $dbname = "ParatyTur";
 
     $conexao = new mysqli($host, $user, $senha, $dbname);

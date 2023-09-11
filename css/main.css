@@ -76,8 +76,28 @@
     padding: 2rem;
 }
 /**/
-@media only screen and (max-width: 1050px){
-    
+@media only screen and (max-width: 1380px){
+    #inicio{
+        width: 100%;
+        border: 1px solid black;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        padding: 0rem;
+    }
+    #inicio .box_e{
+        width: 100%;
+        text-align: center;
+    }
+    #inicio .box_d{
+        width: 100%;
+        box-shadow: none;
+    }
+    #inicio .box_d img{
+        width: 200px;
+        height: 250px;
+    }
 }
 
 /**/

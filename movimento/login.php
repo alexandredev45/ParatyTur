@@ -3,12 +3,13 @@ include_once("../classes/conexao.php");
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
-    $host = "localhost";
-    $user = "root";
-    $senha = "";
-    $dbname = "ParatyTur";
+    $dbHost     = "localhost";
+    $dbUsername = "esocialu_AlexandreDev45";
+    $dbPassword = "8416RWo{bXM-";
+    $dbName     = "esocialu_ParatyTur";
 
-    $conexao = new mysqli($host, $user, $senha, $dbname);
+    
+    $conexao = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName);
 
     // Verificar conexão
     if ($conexao->connect_error) {

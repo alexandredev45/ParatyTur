@@ -1,6 +1,6 @@
 <?php
 
-
+//Access
 include_once("../classes/conexao.php");
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -21,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Lógica de verificação de credenciais.
     // Consulta SQL para inserir as credenciais no banco de dados.
 
-    $mysql = "INSERT INTO login (id_login, usuario, senha) VALUES (1, 'adm', '1234')";
+    $mysql = "INSERT INTO login (id_login, usuario, senha) VALUES (1, 'adm2', '1234')";
 
     if (mysqli_query($conexao, $mysql)) {
         // Credenciais inseridas com sucesso.

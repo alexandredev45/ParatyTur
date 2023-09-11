@@ -19,6 +19,47 @@
 #inicio .box_e{
     width: 60%;
     border: 1px solid black;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#inicio .box_e h2{
+    font-weight: bolder;
+    font-size: 3rem;
+    margin-top: 1rem;
+    background-color: #fbfb6bdc;
+    padding: 0 1rem;
+}
+#inicio .box_e h3{
+    font-size: 2rem;
+    font-weight: bolder;
+    margin-top: 1rem;
+    padding: 0 1rem;
+    background-color: #fbfb6bdc;
+}
+#inicio .box_e p{
+    font-size: 1.5rem;
+    font-weight: bolder;
+    margin-top: 1rem;
+}
+#inicio .box_e a{
+    font-size: 1.5rem;
+    font-weight: bolder;
+    margin-top: 4rem;
+    width: 300px;
+    height: 70px;
+    padding: 1rem;
+    border: 1px solid black;
+    background-color: #0988d0;
+    color: #ffffff;
+    text-decoration: none;
+}
+#inicio .box_e a:hover{
+    cursor: pointer;
+    background-color: #fbfb6b;
+    color: #000;
+    font-weight: bolder;
 }
 #inicio .box_d{
     width: 20%;
@@ -26,19 +67,76 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: #0988d0;
+    box-shadow: 5px 5px 10px #facf39;
 }
 #inicio .box_d img{
     width: 300px;
     height: 400px;
     padding: 2rem;
 }
+/**/
+@media only screen and (max-width: 1050px){
+    font-size: ;
+}
 
-@media only screen and (max-width: 600px){
+/**/
+@media only screen and (max-width: 1050px){
     
+    #inicio{
+        width: 100%;
+        border: 1px solid black;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        padding: 0rem;
+    }
+    #inicio .box_e{
+        width: 100%;
+        text-align: center;
+    }
+    #inicio .box_d{
+        width: 100%;
+        box-shadow: none;
+    }
+    #inicio .box_d img{
+        width: 200px;
+        height: 250px;
+    }
+}
+
+/*MOBILE*/
+@media only screen and (max-width: 600px){
+    #inicio{
+        width: 100%;
+        border: 1px solid black;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        padding: 0rem;
+    }
+    #inicio .box_e{
+        width: 100%;
+        text-align: center;
+    }
+    #inicio .box_d{
+        width: 100%;
+        box-shadow: none;
+    }
+    #inicio .box_d img{
+        width: 200px;
+        height: 250px;
+    }
 }
 
 
 /****************************** PARTE 02 ******************************/
+
+
+
+
 
 /****************************** PARTE 03 ******************************/
 

@@ -7,7 +7,7 @@
     $obs           = $_POST['obs'];
 
 try{    
-    $comando = $conexao->prepare("INSERT INTO produto(nome, valor, quantidade, obs) VALUES(:nome, :valor, :quantidade, :obs)");
+    $comando = $conexao->prepare('INSERT INTO produto(nome, valor, quantidade, obs) VALUES(:nome, :valor, :quantidade, :obs)');
     
     $comando->execute(array(
     ':nome'         => $nome,

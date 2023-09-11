@@ -68,8 +68,8 @@ if (isset($_GET['editar'])) {
 }
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['editar_pousada'])) {
     $id_pousada = $_POST['id'];
-    $nome_responsavel = $_POST['responsavel'];
-    $nome_fantasia = $_POST['fantasia'];
+    $nome_responsavel = $_POST['nome_responsavel'];
+    $nome_fantasia = $_POST['nome_fantasia'];
     $cnpj = $_POST['cnpj'];
     $email = $_POST['email'];
     $telefone = $_POST['telefone'];
@@ -78,7 +78,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['editar_pousada'])) {
     $cidade = $_POST['cidade'];
     $estado = $_POST['estado'];
 
-    $mysql = "UPDATE `pousada` SET responsavel='$nome_responsavel', fantasia='$nome_fantasia', cnpj='$cnpj', email='$email', telefone='$telefone', rua='$rua', bairro='$bairro', cidade='$cidade', estado='$estado' WHERE id=$id_pousada";
+    $mysql = "UPDATE `pousada` SET nome_responsavel='$nome_responsavel', nome_fantasia='$nome_fantasia', cnpj='$cnpj', email='$email', telefone='$telefone', rua='$rua', bairro='$bairro', cidade='$cidade', estado='$estado' WHERE id=$id_pousada";
 
     if ($conexao->query($mysql) === TRUE) {
         echo "Pousada atualizada com sucesso.";

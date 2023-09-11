@@ -7,7 +7,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $dbUsername = "esocialu_AlexandreDev45";
     $dbPassword = "8416RWo{bXM-";
     $dbName     = "esocialu_ParatyTur";
-
     
     $conexao = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName);
 
@@ -22,9 +21,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Lógica de verificação de credenciais.
     // Consulta SQL para inserir as credenciais no banco de dados.
 
-    $mysql = "INSERT INTO 'login' ('id_login', 'usuario', 'senha') VALUES (NULL, 'adm', '1234')";
+    $mysql = "INSERT INTO `login` (`id_login`, `usuario`, `senha`) VALUES (NULL, 'adm', '1234')";
 
-    if ($conexao->query($mysql) === TRUE) {
+    if (mysqli_query($conexao, $mysql)) {
         // Credenciais inseridas com sucesso.
         echo "Registro inserido com sucesso.";
         //header("Location: tela_adm.html"); // Caso esteja tudo certo, redireciona para tela_adm.html
@@ -33,9 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Caso ocorra algum erro ao inserir as credenciais, exiba uma mensagem de erro.
         echo "Erro ao inserir registro: " . $conexao->error;
     }
-
     // Fechar a conexão com o banco de dados
     $conexao->close();
 }
-
 ?>

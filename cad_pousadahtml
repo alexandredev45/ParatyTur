@@ -15,19 +15,19 @@
         <h1 class="mb-4">Cadastro de Pousada</h1>
         <form>
             <div class="mb-3">
-                <label for="nome" class="form-label">Nome Responsavel</label>
+                <label for="nome" class="form-label">Responsável</label>
                 <input type="text" class="form-control" id="nome" name="nome" placeholder="Digite o nome do responsavel" required>
             </div>
             <div class="mb-3">
-                <label for="nome" class="form-label">Nome Fantasia</label>
+                <label for="nome" class="form-label">Fantasia</label>
                 <input type="text" class="form-control" id="nome_fantisia" name="nome_fantasia" placeholder="Digite o nome Fantasia" required>
             </div>
             <div class="mb-3">
                 <label for="nome" class="form-label">CNPJ</label>
-                <input type="text" class="form-control" id="cnpj" name="cnpj" placeholder="Digite o cnpj" required>
+                <input type="text" class="form-control" id="cnpj" name="cnpj" placeholder="Digite seu cnpj" required>
             </div>
             <div class="mb-3">
-                <label for="nome" class="form-label">Email</label>
+                <label for="nome" class="form-label">E-mail</label>
                 <input type="text" class="form-control" id="email" name="email" placeholder="Digite seu email" required>
             </div>
             <div class="mb-3">
@@ -36,11 +36,11 @@
             </div>
 
             <div class="mb-3">
-                <label for="nome" class="form-label">Rua:</label>
+                <label for="nome" class="form-label">Rua</label>
                 <input type="text" class="form-control" id="rua" name="rua" placeholder="Digite o nome da sua rua" required>
             </div>
             <div class="mb-3">
-                <label for="nome" class="form-label">bairro</label>
+                <label for="nome" class="form-label">Bairro</label>
                 <input type="text" class="form-control" id="bairro" name="bairro" placeholder="Digite o nome do seu bairro" required>
             </div>
             <div class="mb-3">

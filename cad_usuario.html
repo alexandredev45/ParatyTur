@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<!---->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro de Pousada</title>
+    <title>Cadastro de Usuario</title>
     <!-- Inclua os arquivos CSS e JS do Bootstrap 5 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
@@ -12,44 +11,15 @@
 </head>
 <body>
     <div class="container mt-5">
-        <h1 class="mb-4">Cadastro de Pousada</h1>
+        <h1 class="mb-4">Cadastro de Usuario</h1>
         <form>
             <div class="mb-3">
-                <label for="nome" class="form-label">Nome Responsavel</label>
-                <input type="text" class="form-control" id="nome" name="nome" placeholder="Digite o nome do responsavel" required>
+                <label for="nome" class="form-label">Usuario</label>
+                <input type="text" class="form-control" id="nome" placeholder="Digite o nome do passeio" required>
             </div>
             <div class="mb-3">
-                <label for="nome" class="form-label">Nome Fantasia</label>
-                <input type="text" class="form-control" id="nome_fantisia" name="nome_fantasia" placeholder="Digite o nome Fantasia" required>
-            </div>
-            <div class="mb-3">
-                <label for="nome" class="form-label">CNPJ</label>
-                <input type="text" class="form-control" id="cnpj" name="cnpj" placeholder="Digite o cnpj" required>
-            </div>
-            <div class="mb-3">
-                <label for="nome" class="form-label">Email</label>
-                <input type="text" class="form-control" id="email" name="email" placeholder="Digite seu email" required>
-            </div>
-            <div class="mb-3">
-                <label for="nome" class="form-label">Telefone</label>
-                <input type="tel" class="form-control" id="telefone" name="telefone" placeholder="Digite seu telefone" required>
-            </div>
-
-            <div class="mb-3">
-                <label for="nome" class="form-label">Rua:</label>
-                <input type="text" class="form-control" id="rua" name="rua" placeholder="Digite o nome da sua rua" required>
-            </div>
-            <div class="mb-3">
-                <label for="nome" class="form-label">bairro</label>
-                <input type="text" class="form-control" id="bairro" name="bairro" placeholder="Digite o nome do seu bairro" required>
-            </div>
-            <div class="mb-3">
-                <label for="nome" class="form-label">Cidade</label>
-                <input type="text" class="form-control" id="cidade" name="cidade" placeholder="Digite o nome da sua cidade" required>
-            </div>
-            <div class="mb-3">
-                <label for="nome" class="form-label">Estado</label>
-                <input type="text" class="form-control" id="estado" name="estado" placeholder="Digite o nome do seu estado" required>
+                <label for="data" class="form-label">Senha</label>
+                <input type="password" class="form-control" id="senha" required>
             </div>
             <button type="submit" class="btn btn-primary">Cadastrar</button>
         </form>

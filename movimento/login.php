@@ -1,11 +1,11 @@
 <?php
-include_once("index.php");
+include_once("tela_adm.html");
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $host = "localhost";
     $user = "root";
-    $senha = " ";
+    $senha = "";
     $dbname = "ParatyTur";
 
     $conexao = new mysqli($host, $user, $senha, $dbname);
@@ -26,7 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($conexao->query($mysql) === TRUE) {
         // Credenciais inseridas com sucesso.
         echo "Registro inserido com sucesso.";
-        //header("Location: index.html"); // Caso esteja tudo certo, redireciona para index.html
+        //header("Location: tela_adm.html"); // Caso esteja tudo certo, redireciona para index.html
         exit();
     } else {
         // Caso ocorra algum erro ao inserir as credenciais, exiba uma mensagem de erro.

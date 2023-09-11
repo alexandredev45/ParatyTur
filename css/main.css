@@ -7,61 +7,41 @@
     --azul03:    #05486e;
     --amarelo01: #fbfb6b;
 }
-#pt_01{
-    border: 1px solid black;
+#inicio{
     width: 100%;
     height: 800px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 1rem 3rem;
-}
-#pt_01 .box_apresentacao{
-    width: 70%;
-    padding: 2rem;
-}
-#pt_01 .box_apresentacao h1{
-    width: 300px;
-    font-size: 3.5rem;
-    color: #ffffff;
-    background-color: #0988d0;
-    padding: 0rem 1rem;
-    margin-bottom: 1rem;
-    font-weight: bolder;
-}
-#pt_01 .box_apresentacao .p_01{
-    font-size: 2rem;
-    width: 730px;
-    font-size: 3.5rem;
-    color: #ffffff;
-    background-color: #0988d0;
-    padding: 0rem 1rem;
-    margin-bottom: 1rem;
-    font-weight: bolder;
-}
-#pt_01 .box_apresentacao .p_02{
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    font-weight: bolder;
-}
-#pt_01 .box_apresentacao a{
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-}
-#pt_01 .box_apresentacao .bg{
-    width: 50%;
     border: 1px solid black;
-}
-.bg{
-    width: 50%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     padding: 1rem;
 }
-.bg img{
-    width: 350px;
-    background-color: #0988d0;
-    padding: 2rem;
-    box-shadow: 5px 5px 10px #facf39;
+#inicio .box_e{
+    width: 60%;
+    border: 1px solid black;
 }
+#inicio .box_d{
+    width: 20%;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#inicio .box_d img{
+    width: 300px;
+    height: 400px;
+    padding: 2rem;
+}
+
+@media only screen and (max-width: 600px){
+    
+}
+
+
+/****************************** PARTE 02 ******************************/
+
+/****************************** PARTE 03 ******************************/
+
+/****************************** PARTE 04 ******************************/
+
+/****************************** PARTE 05 ******************************/

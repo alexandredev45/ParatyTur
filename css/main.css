@@ -10,7 +10,6 @@
 #inicio{
     width: 100%;
     height: 800px;
-    border: 1px solid black;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -18,7 +17,6 @@
 }
 #inicio .box_e{
     width: 60%;
-    border: 1px solid black;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -26,22 +24,22 @@
 }
 #inicio .box_e h2{
     font-weight: bolder;
-    font-size: 3rem;
+    font-size: 3.5rem;
     margin-top: 1rem;
     background-color: #fbfb6bdc;
     padding: 0 1rem;
 }
 #inicio .box_e h3{
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: bolder;
     margin-top: 1rem;
     padding: 0 1rem;
     background-color: #fbfb6bdc;
 }
 #inicio .box_e p{
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     font-weight: bolder;
-    margin-top: 1rem;
+    margin-top: 1.5rem;
 }
 #inicio .box_e a{
     font-size: 1.5rem;
@@ -63,7 +61,6 @@
 }
 #inicio .box_d{
     width: 20%;
-    border: 1px solid black;
     display: flex;
     align-items: center;
     justify-content: center;

@@ -1,5 +1,5 @@
 <?php
-include_once(db.sql);
+include_once("../classes/conexao.php");
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     //conexao com o banco

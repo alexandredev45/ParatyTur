@@ -1,5 +1,5 @@
 <?php
-include_once("index.php");
+include_once("tela_adm.html");
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 

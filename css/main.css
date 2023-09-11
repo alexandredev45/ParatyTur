@@ -17,12 +17,15 @@
     padding: 1rem 3rem;
 }
 #pt_01 .box_apresentacao{
-    width: 70%;
+    width: 60%;
     padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 #pt_01 .box_apresentacao h1{
-    width: 300px;
-    font-size: 3.5rem;
+    width: 250px;
+    font-size: 3rem;
     color: #ffffff;
     background-color: #0988d0;
     padding: 0rem 1rem;
@@ -30,9 +33,8 @@
     font-weight: bolder;
 }
 #pt_01 .box_apresentacao .p_01{
-    font-size: 2rem;
-    width: 730px;
-    font-size: 3.5rem;
+    font-size: 2.5rem;
+    width: 530px;
     color: #ffffff;
     background-color: #0988d0;
     padding: 0rem 1rem;
@@ -47,9 +49,22 @@
 #pt_01 .box_apresentacao a{
     font-size: 1.5rem;
     margin-bottom: 1rem;
+    border: 1px solid #ffffff;
+    padding: 1rem;
+    margin-top: 2rem;
+    background-color: #0988d0;
+    color: #ffffff;
+    font-weight: bolder;
+    text-decoration: none;
+}
+#pt_01 .box_apresentacao a:hover{
+    cursor: pointer;
+    background-color: #fbfb6b;
+    color: #000;
+    border: 1px solid black;
 }
 #pt_01 .box_apresentacao .bg{
-    width: 50%;
+    width: 40%;
     border: 1px solid black;
 }
 .bg{
@@ -64,4 +79,8 @@
     background-color: #0988d0;
     padding: 2rem;
     box-shadow: 5px 5px 10px #facf39;
+}
+
+@media only screen and (max-width: 600px){
+    
 }

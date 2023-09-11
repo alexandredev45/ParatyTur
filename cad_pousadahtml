@@ -17,7 +17,7 @@
             <input type="hidden" name="id" value="<?php echo $id_pousada['id']; ?>">
             <div class="mb-3">
                 <label for="nome" class="form-label">Responsável</label>
-                <input type="text" class="form-control" id="nome" name="nome" placeholder="Digite o nome do responsavel" required>
+                <input type="text" class="form-control" id="nome" name="nome_responsavel" placeholder="Digite o nome do responsavel" required>
             </div>
             <div class="mb-3">
                 <label for="nome" class="form-label">Fantasia</label>

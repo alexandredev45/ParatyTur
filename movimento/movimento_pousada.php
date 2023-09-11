@@ -1,9 +1,9 @@
 <?php
-include_once('conexao.php');
+include_once('../classes/conexao.php');
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $nome_responsavel = $_POST['responsavel'];
-    $nome_fantasia = $_POST['fantasia'];
+    $nome_responsavel = $_POST['nome_responsavel'];
+    $nome_fantasia = $_POST['nome_fantasia'];
     $cnpj = $_POST['cnpj'];
     $email = $_POST['email'];
     $telefone = $_POST['telefone'];
@@ -13,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $estado = $_POST['estado'];
 
     //REGISTRAR nova pousada
-    $mysql = "INSERT INTO `pousada` (`responsavel`, `fantasia`, `cnpj`, `email`, `telefone`, `rua`, `bairro`, `cidade`, `estado`) VALUES ('$responsavel', '$fantasia', '$cnpj', '$email', '$telefone', '$rua', '$bairro', '$cidade', '$estado')";
+    $mysql = "INSERT INTO `pousada` (`nome_responsavel`, `nome_fantasia`, `cnpj`, `email`, `telefone`, `rua`, `bairro`, `cidade`, `estado`) VALUES ('$nome_responsavel', '$nome_fantasia', '$cnpj', '$email', '$telefone', '$rua', '$bairro', '$cidade', '$estado')";
 
     if ($conexao->query($mysql) === TRUE) {
         echo "Pousada cadastrada com sucesso.";
@@ -32,8 +32,8 @@ if ($resultado->num_rows > 0) {
     while ($linha = $resultado->fetch_assoc()) {
         echo "<tr>";
         echo "<td>" . $linha['id'] . "</td>";
-        echo "<td>" . $linha['responsavel'] . "</td>";
-        echo "<td>" . $linha['fantasia'] . "</td>";
+        echo "<td>" . $linha['nome_responsavel'] . "</td>";
+        echo "<td>" . $linha['nome_fantasia'] . "</td>";
         echo "<td>" . $linha['cnpj'] . "</td>";
         echo "<td>" . $linha['email'] . "</td>";
         echo "<td>" . $linha['telefone'] . "</td>";
@@ -50,7 +50,7 @@ if ($resultado->num_rows > 0) {
 }
 
 //EDITAR informações da Pousada.
-    $mysql = "UPDATE `pousada` SET responsavel='$nome_responsavel', fantasia='$nome_fantasia', cnpj='$cnpj', email='$email', telefone='$telefone', rua='$rua', bairro='$bairro', cidade='$cidade', estado='$estado' WHERE id=$id_pousada";
+    $mysql = "UPDATE `pousada` SET nome_responsavel='$nome_responsavel', nome_fantasia='$nome_fantasia', cnpj='$cnpj', email='$email', telefone='$telefone', rua='$rua', bairro='$bairro', cidade='$cidade', estado='$estado' WHERE id=$id_pousada";
 if ($conexao->query($mysql) === TRUE) {
         echo "Pousada atualizada com sucesso.";
 } else {

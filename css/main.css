@@ -165,9 +165,73 @@
 
 /****************************** PARTE 02 ******************************/
 
-
-
-
+#video{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border: 1px solid black;
+    padding: 1rem;
+    background-color: #0988d0;
+}
+#video .box_text{
+    width: 60%;
+    padding: 1rem;
+    border: 1px solid black;
+}
+#video .box_text h2{
+    font-size: 2rem;
+    color: #ffffff;
+    margin: 1rem;
+}
+#video .box_text p{
+    font-size: 1.25rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: var(--branco);
+    margin: 1rem;
+}
+#video .box_video{
+    width: 40%;
+    padding: 1rem;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#video .box_video iframe{
+    width: 90%;
+    height: 350px;
+}
+@media only screen and (max-width: 1280px){
+    #video{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        padding: 1rem;
+    }
+    #video .box_text{
+        width: 100%;
+    }
+    #video .box_video{
+        width: 100%;
+    }
+    #video .box_video iframe{
+        width: 90%;
+        height: 30rem;
+    }
+}
+@media only screen and (max-width: 900px){
+    #video .box_video{
+        width: 100%;
+    }
+    #video .box_video iframe{
+        width: 90%;
+        height: 20rem;
+    }
+}
 
 /****************************** PARTE 03 ******************************/
 

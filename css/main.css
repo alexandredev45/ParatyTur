@@ -179,12 +179,13 @@
 }
 #video .box_text h2{
     font-size: 2rem;
+    font-weight: bolder;
     color: #ffffff;
     margin: 1rem;
 }
 #video .box_text p{
-    font-size: 1.25rem;
-    font-weight: 500;
+    font-size: 1.05rem;
+    font-weight: 800;
     letter-spacing: 1px;
     color: var(--branco);
     margin: 1rem;
@@ -232,6 +233,181 @@
 
 /****************************** PARTE 03 ******************************/
 
+#vantagens{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 5rem 0;
+    text-align: center;
+}
+#vantagens h2{
+    margin: 1rem;
+    font-size: 2.5rem;
+}
+#vantagens ul li{
+    margin: 1rem;
+    font-size: 1.5rem;
+    list-style: none;
+    margin-left: 0.5rem;
+    font-weight: bold;
+}
+#vantagens ul li i{
+    color: chartreuse;
+    margin-right: 10px;
+}
+
 /****************************** PARTE 04 ******************************/
 
+#list{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1rem;
+}
+#list article{
+    width: 60%;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+#list article h2{
+    font-size: 2rem;
+    margin: 1rem;
+    font-weight: bolder;
+}
+#list article ul{
+    padding-bottom: 2rem;
+}
+#list article ul li{
+    list-style: none;
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin: 0.5rem;
+}
+#list article ul li i{
+    margin-right: 10px;
+    color: chartreuse;
+    font-size: 1.5rem;
+}
+#list div{
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    border: 1px solid black;
+}
+#list div img{
+    width: 70%;
+    
+}
+@media only screen and (max-width: 1280px){
+    #list{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: space-around;
+        padding: 1rem;
+    }
+    #list article{
+        width: 100%;
+    }
+    #list div{
+        width: 100%;
+    }
+}
+
 /****************************** PARTE 05 ******************************/
+
+#sobre{
+    width: 100%;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1rem;
+}
+#sobre div{
+    width: 25%;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background-color: #0988d0;
+}
+#sobre div img{
+    width: 40%;
+}
+#sobre article {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#sobre article h3{
+    font-size: 1.9rem;
+    margin: 1rem;
+}
+#sobre article p{
+    font-size: 1.15rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin: 0 2rem;
+}
+#sobre article .number{
+    width: 90%;
+    margin: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1rem;
+    background-color: #ffffff;
+}
+#sobre article .number .n{
+    width: 8rem;
+    height: 8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+}
+
+#sobre article .number .n p{
+    font-size: 2rem;
+    font-weight: bolder;
+}
+#sobre article .number .n .txt{
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+@media only screen and (max-width: 900px){
+
+    #sobre div{
+        width: 0%;
+        border: 0px solid black;
+        background-color: transparent;
+    }
+    #sobre div img{
+        width: 0%;
+    }
+    #sobre article {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+}
+
+/****************************** PARTE 06 ******************************/
+
+/****************************** PARTE 07 ******************************/

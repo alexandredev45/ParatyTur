@@ -1,13 +1,6 @@
 <?php
 include_once('../classes/conexao.php');
 
-$dbHost     = "localhost";
-$dbUsername = "esocialu_AlexandreDev45";
-$dbPassword = "8416RWo{bXM-";
-$dbName     = "esocialu_ParatyTur";
-    
-$conexao = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName);
-
     // VERFICAR conexão
 if ($conexao->connect_error) {
     die("Erro de conexão com o banco de dados: " . $conexao->connect_error);
@@ -76,8 +69,7 @@ if (isset($_GET['editar'])) {
 } else {
     echo "Ocorreu um erro. Nenhuma pousada foi registrada. Por favor, verifique as informações e tente novamente." . $conxao->error;
 }
-
 $conexao->close();
-
 ?>
+
 

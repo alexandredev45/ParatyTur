@@ -22,14 +22,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['cadastrar'])) {
 
     if (mysqli_query($conexao, $mysql)) {
         // Credenciais inseridas com sucesso.
-        echo "Registro inserido com sucesso.";
+
+        $_SESSION['msg'] = "<div class='alert alert-success'>Login feito com sucesso!</div>";
+        echo("<script type='text/javascript'> location.href='../tela_adm.html';</script>");
         //header("Location: tela_adm.html"); // Caso esteja tudo certo, redireciona para tela_adm.html
         exit();
+    }
     } else {
         // Caso ocorra algum erro ao inserir as credenciais, exiba uma mensagem de erro.
-        echo "Erro ao inserir registro: " . $conexao->error;
+        $_SESSION['msg'] = "<div class='alert alert-success'>Ocorreu um erro ao fazer login. Por favor, tente novamente.</div>";
+        echo("<script type='text/javascript'> location.href='../login.html';</script>"). $conexao->error;
     }
-}
     // Fechar a conexão com o banco de dados
     $conexao->close();
 ?>

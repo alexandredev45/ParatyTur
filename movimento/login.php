@@ -29,7 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['cadastrar'])) {
         // Caso ocorra algum erro ao inserir as credenciais, exiba uma mensagem de erro.
         echo "Erro ao inserir registro: " . $conexao->error;
     }
+}
     // Fechar a conexão com o banco de dados
     $conexao->close();
-}
 ?>

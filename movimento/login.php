@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['cadastrar'])) {
     $senha = '1234';
     // Consulta SQL para inserir as credenciais no banco de dados.
 
-    $mysql = "INSERT INTO `login` (`id_login`, `usuario`, `senha`) VALUES (NULL, 'adm', '1234')";
+    $mysql = "INSERT INTO `usuario` (`id_usuario`, `usuario`, `senha`) VALUES (NULL, 'adm', '1234')";
 
     if (mysqli_query($conexao, $mysql)) {
         // Credenciais inseridas com sucesso.

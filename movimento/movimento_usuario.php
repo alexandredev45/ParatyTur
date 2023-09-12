@@ -12,20 +12,19 @@ $conexao = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName);
 if ($conexao->connect_error) {
     die("Erro de conexão com o banco de dados: " . $conexao->connect_error);
 }
-    // CRIAR novo usuário
+    // CADASTRAR novo usuario
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['cadastrar'])) {
     $usuario = $_POST['usuario'];
     $senha = $_POST['senha'];
-    
-    // CADASTRAR novo usuario
+
     $mysql = "INSERT INTO `usuario` (`usuario`, `senha`) VALUES ('$usuario', '$senha')";
     
     if ($conexao->query($mysql) === TRUE) {
-            echo "Usuário cadastrado com sucesso.";
-            exit();
-        } else {
-            echo "Erro ao cadastrar usuário. Por favor, tente novamente. " . $conexao->error;
-        }
+        echo "Usuário cadastrado com sucesso.";
+        exit();
+    } else {
+        echo "Erro ao cadastrar usuário. Por favor, tente novamente. " . $conexao->error;
+    }
 }
     // EXIBIR lista de usuário para EDIÇÃO e EXCLUSÃO
 

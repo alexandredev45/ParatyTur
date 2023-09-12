@@ -13,7 +13,7 @@ if ($conexao->connect_error) {
     die("Erro de conexão com o banco de dados: " . $conexao->connect_error);
 }
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['cadastrar'])) {
     $nome_responsavel = $_POST['nome_responsavel'];
     $nome_fantasia = $_POST['nome_fantasia'];
     $cnpj = $_POST['cnpj'];

@@ -16,8 +16,6 @@ if ($conexao->connect_error) {
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $usuario = 'adm';
     $senha = '1234';
-
-    // Lógica de verificação de credenciais.
     // Consulta SQL para inserir as credenciais no banco de dados.
 
     $mysql = "INSERT INTO `login` (`id_login`, `usuario`, `senha`) VALUES (NULL, 'adm', '1234')";

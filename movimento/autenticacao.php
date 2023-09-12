@@ -1,15 +1,12 @@
 <?php
 include_once("../classes/conexao.php");
 
-//Login ADM1
-$usuario1 = $_POST['usuario1'];
-$senha1 = $_POST['senha1'];
-// Login ADM2
-$usuario2 = $_POST['usuario2'];
-$senha2 = $_POST['senha2'];
-//Login ADM3
-$usuario3 = $_POST['usuario3'];
-$senha3 = $_POST['senha3'];
+$dbHost     = "localhost";
+$dbUsername = "esocialu_AlexandreDev45";
+$dbPassword = "8416RWo{bXM-";
+$dbName     = "esocialu_ParatyTur";
+
+$conexao = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName);
 
 // Verificar conexão
 if ($conexao->connect_error) {
@@ -29,4 +26,5 @@ if (($usuario_digitado === $usuario1 && $senha_digitada === $senha1) ||
 }
 
 $conexao->close();
+
 ?>

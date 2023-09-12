@@ -30,31 +30,30 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['cadastrar'])) {
         echo "Ocorreu um erro ao registrar passeio, por favor, verifique os valores inseridos e tente novamente." . $conexao->error;
     }
 }
-
     // EXIBIR lista de barcos para EDIÇÃO e EXCLUSÃO
 if (isset($_GET['editar'])) {
     $id_passeio = $_GET['editar'];
 
     $mysql = "SELECT * FROM `passeio` WHERE `id_passeio` = $id_passeio";
-    
     $resultado = $conexao->query($mysql);
 
-    echo "<table>";
-    echo "<tr><th>ID</th><th>Nome</th><th>Local</th><th>Duração</th><th>Valor</th><th>Descrição</th></tr>";
-
-    while ($linha = $resultado->fetch_assoc()) {
-        echo "<tr>";
-        echo "<td>" . $linha['id_passeio'] . "</td>";
-        echo "<td>" . $linha['nome'] . "</td>";
-        echo "<td>" . $linha['local_'] . "</td>";
-        echo "<td>" . $linha['duracao'] . "</td>";
-        echo "<td>" . $linha['valor'] . "</td>";
-        echo "<td>" . $linha['descricao'] . "</td>";
-        echo "<td><a href='?editar=" . $linha['id_passeio'] . "'>Editar</a> | <a href='?excluir=" . $linha['id_passeio'] . "'>Excluir</a></td>";
-        echo "</tr>";
+    if ($resultado->num_rows > 0){
+        echo "<table>";
+        echo "<tr><th>ID</th><th>Nome</th><th>Local</th><th>Duração</th><th>Valor</th><th>Descrição</th></tr>";
+    
+        while ($linha = $resultado->fetch_assoc()) {
+            echo "<tr>";
+            echo "<td>" . $linha['id_passeio'] . "</td>";
+            echo "<td>" . $linha['nome'] . "</td>";
+            echo "<td>" . $linha['local_'] . "</td>";
+            echo "<td>" . $linha['duracao'] . "</td>";
+            echo "<td>" . $linha['valor'] . "</td>";
+            echo "<td>" . $linha['descricao'] . "</td>";
+            echo "<td><a href='?editar=" . $linha['id_passeio'] . "'>Editar</a> | <a href='?excluir=" . $linha['id_passeio'] . "'>Excluir</a></td>";
+            echo "</tr>";
+        }
+        echo "</table>";
     }
-    echo "</table>";
-
 } elseif (isset($_GET['excluir'])) {
     $id_passeio = $_GET['excluir'];
 

@@ -81,7 +81,7 @@ create table cliente (
 create table parceiro (
     id_parceiro         int primary key identity,
     nome                varchar(250),
-    rg/cpf              varchar(250),
+    rg_cpf              varchar(250),
     telefone            varchar(50),
     email               varchar(250)
 )

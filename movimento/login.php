@@ -13,7 +13,7 @@ if ($conexao->connect_error) {
     die("Erro de conexão com o banco de dados: " . $conexao->connect_error);
 }
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['cadastrar'])) {
     $usuario = 'adm';
     $senha = '1234';
     // Consulta SQL para inserir as credenciais no banco de dados.
@@ -29,7 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Caso ocorra algum erro ao inserir as credenciais, exiba uma mensagem de erro.
         echo "Erro ao inserir registro: " . $conexao->error;
     }
+}
     // Fechar a conexão com o banco de dados
     $conexao->close();
-}
 ?>

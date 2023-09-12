@@ -170,14 +170,12 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    border: 1px solid black;
     padding: 1rem;
     background-color: #0988d0;
 }
 #video .box_text{
     width: 60%;
     padding: 1rem;
-    border: 1px solid black;
 }
 #video .box_text h2{
     font-size: 2rem;
@@ -194,7 +192,6 @@
 #video .box_video{
     width: 40%;
     padding: 1rem;
-    border: 1px solid black;
     display: flex;
     align-items: center;
     justify-content: center;

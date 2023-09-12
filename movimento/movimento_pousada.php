@@ -29,6 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if ($conexao->query($mysql) === TRUE) {
         echo "Pousada cadastrada com sucesso.";
+        exit();
     } else {
         echo "Erro ao cadastrar a pousada. Por favor, verifique as informações e tente novamente." . $conexao->error;
     }

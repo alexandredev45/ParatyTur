@@ -2,14 +2,14 @@
 include_once("../classes/conexao.php");
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    //conexao com o banco
-    $host = "localhost";
-    $user = "root";
-    $senha = "";
-    $dbname = "ParatyTur";
-
-    $conexao = new mysqli($host, $user, $senha, $dbname);
+    $dbHost     = "localhost";
+    $dbUsername = "esocialu_AlexandreDev45";
+    $dbPassword = "8416RWo{bXM-";
+    $dbName     = "esocialu_ParatyTur";
     
+    $conexao = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName);
+
+    // Verificar conexão
     if ($conexao->connect_error) {
         die("Erro de conexão com o banco de dados: " . $conexao->connect_error);
     }
@@ -32,9 +32,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     //EXIBE listas de barco para EDIÇÃO e EXCLUSÃO
 if (isset($_GET['editar'])) {
-    $barco_id = $_GET['editar'];
+    $id_barco = $_GET['editar'];
 
-    $sql = "SELECT * FROM `barco` WHERE `id_barco` = $barco_id";
+    $mysql = "SELECT * FROM `barco` WHERE `id_barco` = $id_barco";
     
     $resultado = $conexao->query($mysql);
 
@@ -55,18 +55,19 @@ while ($linha = $resultado->fetch_assoc()) {
     echo "</table>";
 
 } elseif (isset($_GET['excluir'])) {
-    $barco_id = $_GET['excluir'];
+    $id_barco = $_GET['excluir'];
 
-    $sql = "DELETE FROM `barco` WHERE `id_barco` = $barco_id";
+    $mysql = "DELETE FROM `barco` WHERE `id_barco` = $id_barco";
 
     if ($conexao->query($mysql) === TRUE) {
         echo "Barco excluído com sucesso.";
+        exit();
     } else {
-        echo "Erro ao excluir o barco: " . $conexao->error;
+        echo "Erro ao excluir o barco. Por favor, tente novamente. " . $conexao->error;
     }
 } else {
     echo "Nenhum barco registrado.";
 }
-    $conexao->close();// Fechar a conexão com o banco de dados
+$conexao->close();// Fechar a conexão com o banco de dados
 
 ?>

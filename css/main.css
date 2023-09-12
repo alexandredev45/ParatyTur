@@ -269,7 +269,6 @@
 }
 #list article{
     width: 60%;
-    border: 1px solid black;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -301,7 +300,6 @@
     align-items: center;
     justify-content: center;
     padding: 1rem;
-    border: 1px solid black;
 }
 #list div img{
     width: 70%;
@@ -342,9 +340,7 @@
     align-items: center;
     justify-content: center;
     padding: 1rem;
-    background-color: #0988d0;
-    border: 1px solid var(--preto);
-    box-shadow: 5px 5px 20px var(--preto);
+    background-color: #0987d01a;
 }
 #sobre div img{
     width: 40%;
@@ -387,13 +383,14 @@
 }
 
 #sobre article .number .n p{
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: bolder;
-    color: var(--branco);
+    color: var(--amarelo02);
 }
 #sobre article .number .n .txt{
     font-size: 1.25rem;
     font-weight: 600;
+    color: var(--branco);
 }
 
 @media only screen and (max-width: 900px){
@@ -428,8 +425,8 @@
 #contato h2{
     font-size: 2rem;
     font-weight: bolder;
-    margin-top: 4rem;
-    margin-bottom: 8rem;
+    margin-top: -1rem;
+    margin-bottom: 6rem;
 }
 #box_contato{
     width: 100%;

@@ -19,7 +19,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link" href="#1">Pedidos</a>
+              <a class="nav-link" href="#1">Vendas</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="movimento/movimento_pousada.php">Pousada</a>

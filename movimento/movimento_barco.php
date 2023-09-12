@@ -1,25 +1,25 @@
 <?php
 include_once("../classes/conexao.php");
+$dbHost     = "localhost";
+$dbUsername = "esocialu_AlexandreDev45";
+$dbPassword = "8416RWo{bXM-";
+$dbName     = "esocialu_ParatyTur";
+    
+$conexao = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName);
+
+    // VERIFICAR conexão
+if ($conexao->connect_error) {
+    die("Erro de conexão com o banco de dados: " . $conexao->connect_error);
+}
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $dbHost     = "localhost";
-    $dbUsername = "esocialu_AlexandreDev45";
-    $dbPassword = "8416RWo{bXM-";
-    $dbName     = "esocialu_ParatyTur";
-    
-    $conexao = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName);
-
-    // Verificar conexão
-    if ($conexao->connect_error) {
-        die("Erro de conexão com o banco de dados: " . $conexao->connect_error);
-    }
-    
     $nome = $_POST['nome'];
     $proprietario = $_POST['proprietario'];
     $comprimento = $_POST['comprimento'];
     $capacidade = $_POST['capacidade'];
     $ano = $_POST['ano'];
-    //CADASTRA novo barco
+
+    //CADASTRAR novo barco
     $sql = "INSERT INTO `barco` (`nome`, `proprietario`, `comprimento`, `capacidade`, `ano`) VALUES ('$nome', '$proprietario', '$comprimento', '$capacidade', '$ano')";
 
     if ($conexao->query($mysql) === TRUE){
@@ -30,7 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 
-    //EXIBE listas de barco para EDIÇÃO e EXCLUSÃO
+    //EXIBIR listas de barco para EDIÇÃO e EXCLUSÃO
 if (isset($_GET['editar'])) {
     $id_barco = $_GET['editar'];
 

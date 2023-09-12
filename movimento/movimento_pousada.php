@@ -1,6 +1,18 @@
 <?php
 include_once('../classes/conexao.php');
 
+$dbHost     = "localhost";
+$dbUsername = "esocialu_AlexandreDev45";
+$dbPassword = "8416RWo{bXM-";
+$dbName     = "esocialu_ParatyTur";
+    
+$conexao = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName);
+
+    // VERFICAR conexão
+if ($conexao->connect_error) {
+    die("Erro de conexão com o banco de dados: " . $conexao->connect_error);
+}
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $nome_responsavel = $_POST['nome_responsavel'];
     $nome_fantasia = $_POST['nome_fantasia'];
@@ -12,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $cidade = $_POST['cidade'];
     $estado = $_POST['estado'];
 
-    //REGISTRAR nova pousada
+    //CADASTRAR nova pousada
     $mysql = "INSERT INTO `pousada` (`nome_responsavel`, `nome_fantasia`, `cnpj`, `email`, `telefone`, `rua`, `bairro`, `cidade`, `estado`) VALUES ('$nome_responsavel', '$nome_fantasia', '$cnpj', '$email', '$telefone', '$rua', '$bairro', '$cidade', '$estado')";
 
     if ($conexao->query($mysql) === TRUE) {
@@ -21,7 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         echo "Erro ao cadastrar a pousada. Por favor, verifique as informações e tente novamente." . $conexao->error;
     }
 }
-//LISTAR pousadas.
+    //LISTAR pousadas
 $mysql = "SELECT * FROM `pousada`";
 $resultado = $conexao->query($mysql);
 
@@ -43,18 +55,17 @@ if ($resultado->num_rows > 0) {
         echo "<td>" . $linha['estado'] . "</td>";
         echo "</tr>";
     }
-
     echo "</table>";
 } else {
     echo "Ocorreu um erro. Nenhuma pousada foi cadastrada. Por favor, verifique as informações e tente novamente.";
 }
 
-//EDITAR informações da Pousada.
+    //EDITAR informações da Pousada
     $mysql = "UPDATE `pousada` SET responsavel='$nome_responsavel', fantasia='$nome_fantasia', cnpj='$cnpj', email='$email', telefone='$telefone', rua='$rua', bairro='$bairro', cidade='$cidade', estado='$estado' WHERE id=$id_pousada";
 if ($conexao->query($mysql) === TRUE) {
         echo "Pousada atualizada com sucesso.";
 } else {
-        echo "Erro ao atualizar a pousada: " . $conexao->error;
+        echo "Erro ao atualizar a pousada. Por favor, tente novamente. " . $conexao->error;
 }
 if (isset($_GET['editar'])) {
     $id_pousada = $_GET['editar'];
@@ -82,13 +93,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['editar_pousada'])) {
 
     if ($conexao->query($mysql) === TRUE) {
         echo "Pousada atualizada com sucesso.";
+        exit();
     } else {
         echo "Erro ao atualizar pousada.  Por favor, verifique as informações e tente novamente." . $conexao->error;
     }
 }
-
-
-//EXCLUI pousada.
+    //EXCLUI pousada
 if (isset($_GET['excluir'])) {
     $id_pousada = $_GET['excluir'];
 
@@ -96,6 +106,7 @@ if (isset($_GET['excluir'])) {
 
     if ($conexao->query($mysql) === TRUE) {
         echo "Pousada excluída com sucesso.";
+        exit();
     } else {
         echo "Ocorreu um erro ao excluir pousada. Por favor, verifique as informações e tente novamente." . $conexao->error;
     }

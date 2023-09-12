@@ -1,20 +1,19 @@
 <?php
 include_once("../classes/conexao.php");
 
+$dbHost     = "localhost";
+$dbUsername = "esocialu_AlexandreDev45";
+$dbPassword = "8416RWo{bXM-";
+$dbName     = "esocialu_ParatyTur";
+
+$conexao = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName);
+
+// Verificar conexão
+if ($conexao->connect_error) {
+    die("Erro de conexão com o banco de dados: " . $conexao->connect_error);
+}
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-
-    $dbHost     = "localhost";
-    $dbUsername = "esocialu_AlexandreDev45";
-    $dbPassword = "8416RWo{bXM-";
-    $dbName     = "esocialu_ParatyTur";
-    
-    $conexao = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName);
-
-    // Verificar conexão
-    if ($conexao->connect_error) {
-        die("Erro de conexão com o banco de dados: " . $conexao->connect_error);
-    }
-
     $usuario = 'adm';
     $senha = '1234';
 

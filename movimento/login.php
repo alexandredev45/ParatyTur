@@ -24,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['cadastrar'])) {
         // Credenciais inseridas com sucesso.
 
         $_SESSION['msg'] = "<div class='alert alert-success'>Login feito com sucesso!</div>";
-        echo("<script type='text/javascript'> location.href='../tela_adm.html';</script>");
+        echo("<script type='text/javascript'> location.href='../autenticacao.php';</script>");
         //header("Location: tela_adm.html"); // Caso esteja tudo certo, redireciona para tela_adm.html
         exit();
     }
@@ -33,6 +33,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['cadastrar'])) {
         $_SESSION['msg'] = "<div class='alert alert-success'>Ocorreu um erro ao fazer login. Por favor, tente novamente.</div>";
         echo("<script type='text/javascript'> location.href='../login.html';</script>"). $conexao->error;
     }
-    // Fechar a conexão com o banco de dados
-    $conexao->close();
+// Fechar a conexão com o banco de dados
+$conexao->close();
 ?>

@@ -19,16 +19,16 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link" href="#1">Vendas</a>
+              <a class="nav-link" href="#">Vendas</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="movimento/movimento_pousada.php">Pousada</a>
+              <a class="nav-link" href="#">Pousada</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#3">Produto</a>
+              <a class="nav-link" href="#">Produto</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#4">Passeio</a>
+              <a class="nav-link" href="#">Passeio</a>
             </li>
           </ul>
           <form class="d-flex" role="search">

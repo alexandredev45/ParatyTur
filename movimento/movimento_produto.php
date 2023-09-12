@@ -1,13 +1,6 @@
 <?php
 include_once("../classes/conexao.php");
 
-$dbHost     = "localhost";
-$dbUsername = "esocialu_AlexandreDev45";
-$dbPassword = "8416RWo{bXM-";
-$dbName     = "esocialu_ParatyTur";
-    
-$conexao = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName);
-
     // VERIFICAR conexão
 if ($conexao->connect_error) {
     die("Erro de conexão com o banco de dados: " . $conexao->connect_error);
@@ -70,27 +63,4 @@ if (isset($_GET['editar'])){
   echo "Produto não registrado. Por favor, tente novamente." . $conexao->error;
 }
 $conexao->close();
-
-/*
-try{    
-  $comando = $conexao->prepare("INSERT INTO `produto`(`nome`, `valor`, `quantidade`, `obs`) VALUES('$nome', '$valor', '$quantidade', '$obs')");
-    
-    $comando->execute(array(
-    ':nome'         => $nome,
-    ':valor'        => $valor,
-    ':quantidade'   => $quantidade,
-    ':obs'          => $obs
-  ));
-
-  
-$cont = $comando->rowCount();
-
-   if($cont == 1)
-     {
-      //header("Location:cadastro_produto.html");
-      echo 'Alert(Produto Cadastrado Com Sucesso !!!);'; //colocar alert no  js
-     }else{
-      echo 'Alert(Erro em tentar registrar cadastro!!);';
-     } 
-
 ?>

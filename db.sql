@@ -31,7 +31,7 @@ create table barco (
     id_barco            int primary key identity,
     nome                varchar(250),
     proprietario        varchar(250),
-    compreimento        varchar(250),
+    comprimento        varchar(250),
     capacidade          int,
     ano                 int
 )

@@ -41,26 +41,27 @@ if (isset($_GET['editar'])) {
     $mysql = "SELECT * FROM `pousada` WHERE `id_pousada`= $id_pousada";
     $resultado = $conexao->query($mysql);
 
-    echo "<table>";
-    echo "<tr><th>ID</th><th>Responsável</th><th>Nome Fantasia</th><th>CNPJ</th><th>Email</th><th>Telefone</th><th>Rua</th><th>Bairro</th><th>Cidade</th><th>Estado</th></tr>";
-
-    while ($linha = $resultado->fetch_assoc()) {
-        echo "<tr>";
-        echo "<td>" . $linha['id_pousada'] . "</td>";
-        echo "<td>" . $linha['nome_responsavel'] . "</td>";
-        echo "<td>" . $linha['nome_fantasia'] . "</td>";
-        echo "<td>" . $linha['cnpj'] . "</td>";
-        echo "<td>" . $linha['email'] . "</td>";
-        echo "<td>" . $linha['telefone'] . "</td>";
-        echo "<td>" . $linha['rua'] . "</td>";
-        echo "<td>" . $linha['bairro'] . "</td>";
-        echo "<td>" . $linha['cidade'] . "</td>";
-        echo "<td>" . $linha['estado'] . "</td>";
-        echo "<td><a href='?editar=" . $linha['id_pousada'] . "'>Editar</a> | <a href='?excluir=" . $linha['id_pousada'] . "'>Excluir</a></td>";
-        echo "</tr>";
+    if ($resultado->num_rows > 0) {
+        echo "<table>";
+        echo "<tr><th>ID</th><th>Responsável</th><th>Nome Fantasia</th><th>CNPJ</th><th>Email</th><th>Telefone</th><th>Rua</th><th>Bairro</th><th>Cidade</th><th>Estado</th></tr>";
+    
+        while ($linha = $resultado->fetch_assoc()) {
+            echo "<tr>";
+            echo "<td>" . $linha['id_pousada'] . "</td>";
+            echo "<td>" . $linha['nome_responsavel'] . "</td>";
+            echo "<td>" . $linha['nome_fantasia'] . "</td>";
+            echo "<td>" . $linha['cnpj'] . "</td>";
+            echo "<td>" . $linha['email'] . "</td>";
+            echo "<td>" . $linha['telefone'] . "</td>";
+            echo "<td>" . $linha['rua'] . "</td>";
+            echo "<td>" . $linha['bairro'] . "</td>";
+            echo "<td>" . $linha['cidade'] . "</td>";
+            echo "<td>" . $linha['estado'] . "</td>";
+            echo "<td><a href='?editar=" . $linha['id_pousada'] . "'>Editar</a> | <a href='?excluir=" . $linha['id_pousada'] . "'>Excluir</a></td>";
+            echo "</tr>";
+        }
+        echo "</table>";
     }
-    echo "</table>";
-
 } elseif (isset($_GET['excluir'])) {
     $id_pousada = $GET_['excluir'];
 

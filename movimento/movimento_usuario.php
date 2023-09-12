@@ -35,7 +35,6 @@ if (isset($_GET['editar'])){
     $resultado = $conexao->query($mysql);
 
     if ($resultado->num_rows > 0) {
-
         echo "<table>";
         echo "<tr><th>ID</th><th>Usuário</th><th>Senha</th></tr>";
         
@@ -48,9 +47,7 @@ if (isset($_GET['editar'])){
             echo "</tr>";
         }
         echo "</table>";
-
-}
-
+    }
 } elseif (isset($_GET['excluir'])) { 
     $id_usuario = $_GET['excluir'];
 

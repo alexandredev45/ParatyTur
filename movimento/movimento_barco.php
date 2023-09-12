@@ -37,23 +37,24 @@ if (isset($_GET['editar'])) {
 
     $mysql = "SELECT * FROM `barco` WHERE `id_barco` = $id_barco";
     $resultado = $conexao->query($mysql);
-
-    echo "<table>";
-    echo "<tr><th>ID</th><th>Nome</th><th>Proprietário</th><th>Comprimento</th><th>Capacidade</th><th>Ano</th><th>Ações</th></tr>";
-
-    while ($linha = $resultado->fetch_assoc()) {
-    echo "<tr>";
-    echo "<td>" . $linha['id_barco'] . "</td>";
-    echo "<td>" . $linha['nome'] . "</td>";
-    echo "<td>" . $linha['proprietario'] . "</td>";
-    echo "<td>" . $linha['comprimento'] . "</td>";
-    echo "<td>" . $linha['capacidade'] . "</td>";
-    echo "<td>" . $linha['ano'] . "</td>";
-    echo "<td><a href='?editar=" . $linha['id_barco'] . "'>Editar</a> | <a href='?excluir=" . $linha['id_barco'] . "'>Excluir</a></td>";
-    echo "</tr>";
+    
+    if ($resultado->num_rows > 0) {
+        echo "<table>";
+        echo "<tr><th>ID</th><th>Nome</th><th>Proprietário</th><th>Comprimento</th><th>Capacidade</th><th>Ano</th><th>Ações</th></tr>";
+    
+        while ($linha = $resultado->fetch_assoc()) {
+        echo "<tr>";
+        echo "<td>" . $linha['id_barco'] . "</td>";
+        echo "<td>" . $linha['nome'] . "</td>";
+        echo "<td>" . $linha['proprietario'] . "</td>";
+        echo "<td>" . $linha['comprimento'] . "</td>";
+        echo "<td>" . $linha['capacidade'] . "</td>";
+        echo "<td>" . $linha['ano'] . "</td>";
+        echo "<td><a href='?editar=" . $linha['id_barco'] . "'>Editar</a> | <a href='?excluir=" . $linha['id_barco'] . "'>Excluir</a></td>";
+        echo "</tr>";
+        }
+        echo "</table>";
     }
-    echo "</table>";
-
 } elseif (isset($_GET['excluir'])) {
     $id_barco = $_GET['excluir'];
 

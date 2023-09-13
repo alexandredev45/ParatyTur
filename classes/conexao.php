@@ -2,9 +2,9 @@
 include_once("../classes/conexao.php");
 
     $dbHost     = "localhost";
-    $dbUsername = "esocialu_AlexandreDev45";
-    $dbPassword = "8416RWo{bXM-";
-    $dbName     = "esocialu_ParatyTur";
+    $dbUsername = "esocialu_dev";
+    $dbPassword = "]Jkj{qKcDZ+.";
+    $dbName     = "esocialu_paratytur";
     
     $conexao = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName);
 

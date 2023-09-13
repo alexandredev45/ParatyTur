@@ -18,9 +18,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Lógica de verificação de credenciais.
     // Consulta SQL para inserir as credenciais no banco de dados.
 
-    $mysql = "INSERT INTO `usuario` (id_usuario, usuario, senha) VALUES (NULL, 'adm', '1234')";
+    $mysqli = "INSERT INTO `usuario` (id_usuario, usuario, senha) VALUES (NULL, 'adm', '1234')";
     
-    if ($conexao->query($mysql) === TRUE) {
+    if ($conexao->query($mysqli) === TRUE) {
         // Credenciais inseridas com sucesso.
         echo "Conexão feita com sucesso.";
         header("Location: tela_adm.php"); // Caso esteja tudo certo, redireciona para tela_adm.php

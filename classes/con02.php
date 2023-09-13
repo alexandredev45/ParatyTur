@@ -1,28 +1,39 @@
+
 <?php
+include_once("../classes/conexao.php");
 
-echo 'Current PHP version :'.phpversion();
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
+    $dbHost     = "localhost";
+    $dbUsername = "root";
+    $dbPassword = "";
+    $dbName     = "paratytur";
 
+    
+    $conexao = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName);
 
+    // Verificar conexão
+    if ($conexao->connect_error) {
+        die("Erro de conexão com o banco de dados: " . $conexao->connect_error);
+    }
 
-// Configurações do banco de dados
-/* 
-$host = 'localhost'; // Host do banco de dados
-$dbname = 'paratytur'; // Nome do banco de dados
-$username = 'dev'; // Nome de usuário do banco de dados
-$password = ']Jkj{qKcDZ+.'; // Senha do usuário do banco de dados
+    // Lógica de verificação de credenciais.
+    // Consulta SQL para inserir as credenciais no banco de dados.
 
-try {
-    // Cria uma conexão PDO
-    $pdo = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
+    $mysql = "INSERT INTO produto (nome, valor, quantidade, descricao, obs) VALUES ('teste', '10', 5, 'oooooo' '1234')";
 
-    // Configura o PDO para lançar exceções em caso de erros
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    if (mysqli_query($conexao, $mysql)) {
+        // Credenciais inseridas com sucesso.
+        echo "Registro inserido com sucesso.";
+        //header("Location: tela_adm.html"); // Caso esteja tudo certo, redireciona para tela_adm.html
+        exit();
+    } else {
+        // Caso ocorra algum erro ao inserir as credenciais, exiba uma mensagem de erro.
+        echo "Erro ao inserir registro: " . $conexao->error;
+    }
 
-    // Agora você pode executar consultas SQL usando $pdo
-    // Exemplo: $pdo->query("SELECT * FROM tabela");
-} catch (PDOException $e) {
-    // Em caso de erro na conexão, você pode tratar a exceção aqui
-    echo "Erro de conexão: " . $e->getMessage();
-}*/
+    // Fechar a conexão com o banco de dados
+    $conexao->close();
+}
+
 ?>

@@ -22,16 +22,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $resultado = mysql_query($conexao, $mysql);
     if ($resultado) {
         // Credenciais inseridas com sucesso.
-        echo "Registro inserido com sucesso.";
+        echo "Conexão feita com sucesso.";
         header("Location: tela_adm.html"); // Caso esteja tudo certo, redireciona para tela_adm.html
         exit();
     } else {
         // Caso ocorra algum erro ao inserir as credenciais, exiba uma mensagem de erro.
-        echo "Erro ao inserir registro: " . $conexao->error;
+        echo "Falha na conexão com o banco de dados: " . $conexao->error;
     }
     // Fechar a conexão com o banco de dados
     $conexao->close();
 }
+
+
+
 
 
 

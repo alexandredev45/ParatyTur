@@ -13,7 +13,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['cadastrar'])) {
     $mysql = "INSERT INTO `usuario` (`usuario`, `senha`) VALUES ('$usuario', '$senha')";
     
     if ($conexao->query($mysql) === TRUE) {
-        echo "Usuário cadastrado com sucesso.";
+        $_SESSION['msg'] = "<div class='alert alert-success'>Usuário cadastrado com sucesso.</div>";
+        echo("<script type='text/javascript'> location.href='../tela_pousada.php';</script>");
         exit();
     } else {
         echo "Erro ao cadastrar usuário. Por favor, tente novamente. " . $conexao->error;

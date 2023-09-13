@@ -20,6 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $mysql = "INSERT INTO `usuario` (id_usuario, usuario, senha) VALUES (1, 'adm', '1234')";
     $resultado = mysql_query($conexao, $mysql);
+    
     if ($resultado) {
         // Credenciais inseridas com sucesso.
         echo "Conexão feita com sucesso.";

@@ -10,7 +10,7 @@ include_once("../classes/conexao.php");
 
     // Verificar conexão
 if (!$conexao) {
-    echo "" . $conexao->connect_error();  
+    echo "" .mysqli_connect_error();  
 }
 echo "<h1>SUCESSO</h1>";
 
@@ -30,7 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         echo "Falha na conexão com o banco de dados: " . $conexao->error;
     }
     // Fechar a conexão com o banco de dados
-    $conexao->close();
+    mysqli_close($conexao);
 }
 
 

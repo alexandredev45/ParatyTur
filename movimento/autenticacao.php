@@ -10,7 +10,7 @@ if (($usuario_digitado === $usuario1 && $senha_digitada === $senha1) ||
     ($usuario_digitado === $usuario2 && $senha_digitada === $senha2) ||
     ($usuario_digitado === $usuario3 && $senha_digitada === $senha3)) {
     // SE SIM: redireciona para a tela do administrador
-    header("Location: tela_adm.php");
+    header("Location: tela_adm.html");
     exit();
 } else {
     // SE NÃO: redireciona para a tela da pousada

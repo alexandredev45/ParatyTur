@@ -1,18 +1,18 @@
 <?php
 include_once("../classes/conexao.php");
 
-    $dbHost     = "localhost";
-    $dbUsername = "esocialu_AlexandreDev45";
-    $dbPassword = "8416RWo{bXM-";
-    $dbName     = "esocialu_ParatyTur";
+    //$dbHost     = "localhost";
+    //$dbUsername = "esocialu_AlexandreDev45";
+    //$dbPassword = "8416RWo{bXM-";
+    //$dbName     = "esocialu_ParatyTur";
     
-    $conexao = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName);
+    $conexao = mysqli_connect ("localhost", "esocialu_AlexandreDev45", "8416RWo{bXM-", "esocialu_ParatyTur");
 
     // Verificar conexão
-if ($conexao->connect_error) {
-    die("Erro de conexão com o banco de dados: " . $conexao->connect_error);
-    exit();  
+if (!$conexao) {
+    echo "" . $conexao->connect_error();  
 }
+echo "<h1>SUCESSO</h1>";
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Lógica de verificação de credenciais.

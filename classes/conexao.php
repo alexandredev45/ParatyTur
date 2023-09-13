@@ -1,19 +1,18 @@
 <?php
 //include_once("../classes/conexao.php");
 
-    $dbHost     = "localhost";
-    $dbUsername = "esocialu_dev";
-    $dbPassword = "]Jkj{qKcDZ+.";
-    $dbName     = "esocialu_paratytur";
+    ///$dbHost     = "localhost";
+    //$dbUsername = "esocialu_dev";
+    //$dbPassword = "]Jkj{qKcDZ+.";
+    //$dbName     = "esocialu_paratytur";
     
-    $conexao = mysqli_connect ("localhost", "esocialu_AlexandreDev45", "8416RWo{bXM-", "esocialu_ParatyTur");
+    $conexao = mysqli_connect ("mysql:host=localhost;dbname=", "if0_35026416", "vKnh76PQ7WtjAi", "esocialu_ParatyTur");
 
     // Verificar conexão
 if (!$conexao) {
     echo "" .mysqli_connect_error(); 
     echo "<h1>SUCESSO</h1>"; 
 }
-
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Lógica de verificação de credenciais.

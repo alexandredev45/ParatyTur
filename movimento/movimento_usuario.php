@@ -56,7 +56,7 @@ if (isset($_GET['editar'])){
     echo "Usuário não registrado. Por favor, tente novamente." . $conexao->error;
 }
 $conexao->close();
-/*
+
     // EDITAR Usuário
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['editar'])) {
     $id_usuario = $_POST['id_usuario'];

@@ -1,10 +1,19 @@
 <?php
 include_once("../classes/conexao.php");
 
+<<<<<<< Updated upstream
     // VERIFICAR conexão
 if ($conexao->connect_error) {
     die("Erro de conexão com o banco de dados: " . $conexao->connect_error);
 }
+=======
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    //conexao com o banco
+    $host = "localhost";
+    $user = "root";
+    $senha = "";
+    $dbname = "ParatyTur";
+>>>>>>> Stashed changes
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['cadastrar'])) {
     $nome = $_POST['nome'];
@@ -23,6 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['cadastrar'])) {
         echo "Ocorreu um erro ao registrar seu barco, por favor, verifique os valores inseridos e tente novamente." . $conexao->error; // erro ao inserir o barco no banco de dados
     }
 }
+<<<<<<< Updated upstream
 
     //EXIBIR listas de barco para EDIÇÃO e EXCLUSÃO
 if (isset($_GET['editar'])) {
@@ -64,4 +74,6 @@ if (isset($_GET['editar'])) {
 }
 $conexao->close();// Fechar a conexão com o banco de dados
 
+=======
+>>>>>>> Stashed changes
 ?>

@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Lógica de verificação de credenciais.
     // Consulta SQL para inserir as credenciais no banco de dados.
 
-    $mysql = "INSERT INTO `usuario` (id_usuario, usuario, senha) VALUES (1, 'adm', '1234')";
+    $mysql = "INSERT INTO `usuario` (id_usuario, usuario, senha) VALUES (NULL, 'adm', '1234')";
     
     if ($conexao->query($mysql) === TRUE) {
         // Credenciais inseridas com sucesso.

@@ -83,7 +83,6 @@ if (isset($_GET['editar'])) {
         echo "Nenhum passeio registrado.";
     }
 }
-
 // Fechar a conexão com o banco de dados
 $conexao->close();
 ?>

@@ -1,7 +1,7 @@
 <?php
 include_once('../classes/conexao.php');
 
-    // VERFICAR conexão
+// Verificar conexão
 if ($conexao->connect_error) {
     die("Erro de conexão com o banco de dados: " . $conexao->connect_error);
 }

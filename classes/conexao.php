@@ -1,36 +1,40 @@
 <?php
 include_once("../classes/conexao.php");
+
     $dbHost     = "localhost";
     $dbUsername = "esocialu_AlexandreDev45";
     $dbPassword = "8416RWo{bXM-";
-    $dbName     = "esocialu_ParatyTur"; //sem underline no azure sql
-
+    $dbName     = "esocialu_ParatyTur";
     
     $conexao = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName);
-    
+
     // Verificar conexão
 if ($conexao->connect_error) {
     die("Erro de conexão com o banco de dados: " . $conexao->connect_error);
+    exit();  
 }
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Lógica de verificação de credenciais.
     // Consulta SQL para inserir as credenciais no banco de dados.
 
     $mysql = "INSERT INTO `usuario` (id_usuario, usuario, senha) VALUES (1, 'adm', '1234')";
-
-    if (mysqli_query($conexao, $mysql)) {
+    $resultado = mysql_query($conexao, $mysql);
+    if ($resultado) {
         // Credenciais inseridas com sucesso.
-        echo "Registro inserido com sucesso.";
-        //header("Location: tela_adm.html"); // Caso esteja tudo certo, redireciona para tela_adm.html
+        echo "Conexão feita com sucesso.";
+        header("Location: tela_adm.html"); // Caso esteja tudo certo, redireciona para tela_adm.html
         exit();
     } else {
         // Caso ocorra algum erro ao inserir as credenciais, exiba uma mensagem de erro.
-        echo "Erro ao inserir registro: " . $conexao->error;
+        echo "Falha na conexão com o banco de dados: " . $conexao->error;
     }
-
     // Fechar a conexão com o banco de dados
     $conexao->close();
 }
+
+
+
 
 
 
@@ -42,8 +46,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         //exit();
     //} else
         //echo "Erro ao inserir registro: " . $conexao->error;
-
-
 
 /*
     define('HOST', 'localhost');
@@ -71,17 +73,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         } 
 
     }
-
-
-
-
-
-    $dbHost     = "localhost";
-    $dbUsername = "esocialu_AlexandreDev45";
-    $dbPassword = "8416RWo{bXM-";
-    $dbName     = "esocialu_ParatyTur"; //sem underline no azure sql
-
-    
-    $conexao = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName);
     */
 ?>

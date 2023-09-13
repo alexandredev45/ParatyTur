@@ -89,10 +89,11 @@ create table parceiro (
 -----------------------------------------------------------------
 
 create table venda (
-    id_venda int primary key identity,
-    --Chave pousada --
-    --Chave passeio--
-    --Chave barco--
-    --Chave produto--
-    --Chave agenta--
+    id_venda            int primary key identity,
+    id_pousada          int primary key identity,
+    id_passeio          int primary key identity,
+    id_barco            int primary key identity,
+    id_produto          int primary key identity,
+    id_agenda           int primary key identity,
+    nome_fantasia       varchar(250),
 )

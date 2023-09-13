@@ -10,7 +10,7 @@
 
     // Verificar conexão
 if (!$conexao) {
-    echo "" .mysqli_connect_error();  
+    echo "" .mysqli_connect_error();
 }else{
     echo "<h1>SUCESSO</h1>";
 }

@@ -25,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['cadastrar'])) {
 
     //EXIBIR listas de parceiro para EDIÇÃO e EXCLUSÃO
 if (isset($_GET['editar'])) {
-    $id_parceiro = $_GET['editar'];
+    $id_barco = $_GET['editar'];
 
     $mysql = "SELECT * FROM `parceiro` WHERE `id_parceiro` = $id_parceiro";
     $resultado = $conexao->query($mysql);

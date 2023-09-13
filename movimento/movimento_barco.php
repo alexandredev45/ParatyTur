@@ -30,7 +30,7 @@ if (isset($_GET['editar'])) {
 
     $mysql = "SELECT * FROM `barco` WHERE `id_barco` = $id_barco";
     $resultado = $conexao->query($mysql);
-    
+
     if ($resultado->num_rows > 0) {
         echo "<table>";
         echo "<tr><th>ID</th><th>Nome</th><th>Proprietário</th><th>Comprimento</th><th>Capacidade</th><th>Ano</th><th>Ações</th></tr>";

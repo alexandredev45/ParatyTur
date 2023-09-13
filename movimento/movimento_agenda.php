@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['cadastrar'])) {
         echo "Agenda registrada com sucesso.";
         exit();
     } else {
-        echo "Erro ao registrar agenda. Por favor, tente novamente." . $conexao->error;
+        echo "Erro ao registrar agenda. Por favor, tente novamente. " . $conexao->error;
     }
 }
     //EXIBIR listas de agenda para EDIÇÃO e EXCLUSÃO

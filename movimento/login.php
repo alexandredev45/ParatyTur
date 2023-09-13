@@ -13,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['cadastrar'])) {
 
     $mysql = "INSERT INTO `usuario` (`id_usuario`, `usuario`, `senha`) VALUES (NULL, 'adm', '1234')";
 
-    if (mysqli_query($conexao, $mysqli)) {
+    if (mysqli_query($conexao, $mysql)) {
         // Credenciais inseridas com sucesso.
 
         $_SESSION['msg'] = "<div class='alert alert-success'>Login feito com sucesso!</div>";

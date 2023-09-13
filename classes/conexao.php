@@ -1,38 +1,38 @@
 <?php
-include_once("../classes/conexao.php");
+//include_once("../classes/conexao.php");
 
     $dbHost     = "localhost";
     $dbUsername = "esocialu_dev";
     $dbPassword = "]Jkj{qKcDZ+.";
     $dbName     = "esocialu_paratytur";
     
-    $conexao = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName);
+    $conexao = mysqli_connect ("localhost", "esocialu_AlexandreDev45", "8416RWo{bXM-", "esocialu_ParatyTur");
 
     // Verificar conexão
-if ($conexao->connect_error) {
-    die("Erro de conexão com o banco de dados: " . $conexao->connect_error);
-    exit();  
+if (!$conexao) {
+    echo "" .mysqli_connect_error();  
 }
+echo "<h1>SUCESSO</h1>";
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Lógica de verificação de credenciais.
     // Consulta SQL para inserir as credenciais no banco de dados.
 
-    $mysql = "INSERT INTO `usuario` (id_usuario, usuario, senha) VALUES (1, 'adm', '1234')";
-    $resultado = mysql_query($conexao, $mysql);
-    if ($resultado) {
+    $mysql = "INSERT INTO `usuario` (id_usuario, usuario, senha) VALUES (NULL, 'adm', '1234')";
+    
+    if ($conexao->query($mysql) === TRUE) {
         // Credenciais inseridas com sucesso.
         echo "Conexão feita com sucesso.";
-        header("Location: tela_adm.html"); // Caso esteja tudo certo, redireciona para tela_adm.html
+        header("Location: tela_adm.php"); // Caso esteja tudo certo, redireciona para tela_adm.php
         exit();
     } else {
         // Caso ocorra algum erro ao inserir as credenciais, exiba uma mensagem de erro.
         echo "Falha na conexão com o banco de dados: " . $conexao->error;
     }
     // Fechar a conexão com o banco de dados
-    $conexao->close();
-}
 
+}
+mysqli_close($conexao);
 
 
 

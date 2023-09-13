@@ -19,11 +19,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Consulta SQL para inserir as credenciais no banco de dados.
 
     $mysql = "INSERT INTO `usuario` (id_usuario, usuario, senha) VALUES (1, 'adm', '1234')";
-
-    if (mysqli_query($conexao, $mysql)) {
+    $resultado = mysql_query($conexao, $mysql);
+    if ($resultado) {
         // Credenciais inseridas com sucesso.
         echo "Registro inserido com sucesso.";
-        //header("Location: tela_adm.html"); // Caso esteja tudo certo, redireciona para tela_adm.html
+        header("Location: tela_adm.html"); // Caso esteja tudo certo, redireciona para tela_adm.html
         exit();
     } else {
         // Caso ocorra algum erro ao inserir as credenciais, exiba uma mensagem de erro.
@@ -70,13 +70,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         } 
 
     }
-
-    $dbHost     = "localhost";
-    $dbUsername = "esocialu_AlexandreDev45";
-    $dbPassword = "8416RWo{bXM-";
-    $dbName     = "esocialu_ParatyTur"; //sem underline no azure sql
-
-    
-    $conexao = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName);
     */
 ?>

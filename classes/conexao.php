@@ -19,9 +19,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Consulta SQL para inserir as credenciais no banco de dados.
 
     $mysql = "INSERT INTO `usuario` (id_usuario, usuario, senha) VALUES (1, 'adm', '1234')";
-    $resultado = mysql_query($conexao, $mysql);
     
-    if ($resultado) {
+    if ($conexao->query($mysql) === TRUE) {
         // Credenciais inseridas com sucesso.
         echo "Conexão feita com sucesso.";
         header("Location: tela_adm.html"); // Caso esteja tudo certo, redireciona para tela_adm.html

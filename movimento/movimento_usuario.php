@@ -58,34 +58,4 @@ if (isset($_GET['editar'])){
 }
 $conexao->close();
 
-    // EDITAR Usuário
-if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['editar'])) {
-    $id_usuario = $_POST['id_usuario'];
-    $usuario = $_POST['usuario'];
-    $senha = $_POST['senha'];
-    
-    $mysql = "UPDATE usuarios SET `usuario`='$usuario', senha='$senha' WHERE id_usuario=$id_usuario";
-    
-    if ($conexao->query($mysql) === TRUE) {
-        echo "Usuário atualizado com sucesso.";
-        exit();
-    } else {
-        echo "Erro ao atualizar usuário. Por favor, tente novamente. " . $conexao->error;
-    }
-}
-    //EXCLUIR usuário
-if (isset($_GET['excluir'])) {
-    $id_usuario = $_GET['excluir'];
-
-    $mysql = "DELETE FROM `usuario` WHERE id_usuario=$id_usuario";
-
-    if ($conexao->query($mysql) === TRUE) {
-        echo "Usuário excluído com sucesso.";
-        exit();
-    } else {
-        echo "Erro ao excluir usuário. Por favor, tente novamente. " . $conexao->error;
-    }
-}
-$conexao->close();
-
 ?>

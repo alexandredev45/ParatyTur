@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['cadastrar'])) {
         echo "Erro ao cadastrar a pousada. Por favor, verifique as informações e tente novamente." . $conexao->error;
     }
 }
-    //LISTAR pousadas
+    //LISTAR pousadas para EDIÇÃO e EXCLUSÃO
 if (isset($_GET['editar'])) {
     $id_pousada = $_GET['editar'];
 

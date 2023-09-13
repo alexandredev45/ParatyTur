@@ -12,10 +12,11 @@ if (($usuario_digitado === $usuario1 && $senha_digitada === $senha1) ||
     // SE SIM: redireciona para a tela do administrador
     header("Location: tela_adm.html");
     exit();
-} else {
-    // SE NÃO: redireciona para a tela da pousada
+}if($usuario_digitado === /*usuario do db*/){
     header("Location: tela_pousada.php");
     exit();
+}else {
+    // SE NÃO: fecha sessao 
 }
 
 $conexao->close();

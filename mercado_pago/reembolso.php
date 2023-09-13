@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
  //REEMBOLSO TOTAL
 MercadoPago\SDK::setAccessToken("YOUR_ACCESS_TOKEN");
@@ -20,3 +21,6 @@ $reembolso->salvar();
  $pagamento = MercadoPago\Pagamento::find_by_id($id_pagamento);
  $reembolso = $pagamento->reembolso();
 ?>
+=======
+<?php ?>
+>>>>>>> 9cba7d19c0f5c128e14dadd72ff9fd2172e604fc

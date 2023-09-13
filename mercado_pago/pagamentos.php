@@ -1,3 +1,4 @@
+<<<<<<< HEAD
          
 <?php
 
@@ -16,3 +17,6 @@
   $pagamento->salvar();
 
 ?>
+=======
+<?php ?>
+>>>>>>> 9cba7d19c0f5c128e14dadd72ff9fd2172e604fc

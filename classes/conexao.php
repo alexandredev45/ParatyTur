@@ -1,5 +1,5 @@
 <?php
-include_once("../classes/conexao.php");
+//include_once("../classes/conexao.php");
 
     //$dbHost     = "localhost";
     //$dbUsername = "esocialu_AlexandreDev45";

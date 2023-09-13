@@ -11,9 +11,9 @@
     // Verificar conexão
 if (!$conexao) {
     echo "" .mysqli_connect_error();  
+}else{
+    echo "<h1>SUCESSO</h1>";
 }
-echo "<h1>SUCESSO</h1>";
-
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Lógica de verificação de credenciais.
     // Consulta SQL para inserir as credenciais no banco de dados.

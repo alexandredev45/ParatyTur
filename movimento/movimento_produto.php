@@ -49,7 +49,7 @@ if (isset($_GET['editar'])){
 
   }
 } elseif (isset($_GET['excluir'])) { 
-  $id_usuario = $_GET['excluir'];
+  $id_produto = $_GET['excluir'];
 
   $mysql = "DELETE FROM `produto` WHERE `id_produto` = $id_produto";
 

@@ -1,12 +1,8 @@
 <?php
 include_once("../classes/conexao.php");
-
-    $dbHost     = "localhost";
-    $dbUsername = "esocialu_AlexandreDev45";
-    $dbPassword = "8416RWo{bXM-";
-    $dbName     = "esocialu_ParatyTur"; //sem underline no azure sql
-    
-    $conexao = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName);
+$con = mysqli_init();
+mysqli_ssl_set($con,NULL,NULL, "{path to CA cert}", NULL, NULL);
+mysqli_real_connect($conn, "paratytur.mysql.database.azure.com", "esocialu_AlexandreDev45", "{8416RWo{bXM-}", "{paratytur}", 3306, MYSQLI_CLIENT_SSL);
 
     // Verificar conexão
 if ($conexao->connect_error) {

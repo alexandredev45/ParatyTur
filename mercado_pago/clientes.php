@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 <?php
     //CRIAR cliente
   MercadoPago\SDK::setAccessToken("ENV_ACCESS_TOKEN");
@@ -36,6 +36,4 @@
   $cliente->cartao_preferencia = "None";
   $cliente->update();
 ?>     
-=======
 <?php ?>
->>>>>>> 9cba7d19c0f5c128e14dadd72ff9fd2172e604fc

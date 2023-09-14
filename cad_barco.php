@@ -15,23 +15,23 @@
         <form action="movimento/movimento_barco.php" method="POST">
             <div class="mb-3">
                 <label for="nome" class="form-label">Nome do Barco</label>
-                <input type="text" class="form-control" id="nome" placeholder="Digite o nome do barco" required>
+                <input type="text" class="form-control" id="nome" name="nome" placeholder="Digite o nome do barco" required>
             </div>
             <div class="mb-3">
                 <label for="marca" class="form-label">Proprietario</label>
-                <input type="text" class="form-control" id="proprietario" placeholder="Digite o nome de quem pertence o barco" required>
+                <input type="text" class="form-control" id="proprietario" name="proprietario" placeholder="Digite o nome de quem pertence o barco" required>
             </div>
             <div class="mb-3">
                 <label for="comprimento" class="form-label">Comprimento do Barco (metros)</label>
-                <input type="number" class="form-control" id="comprimento" placeholder="Digite o comprimento do barco" required>
+                <input type="number" class="form-control" id="comprimento" name="comprimento" placeholder="Digite o comprimento do barco" required>
             </div>
             <div class="mb-3">
                 <label for="ano" class="form-label">Capacidade</label>
-                <input type="number" class="form-control" id="capacidade" placeholder="Digite a capacidade do barco" required>
+                <input type="number" class="form-control" id="capacidade" name="capacidade" placeholder="Digite a capacidade do barco" required>
             </div>
             <div class="mb-3">
                 <label for="ano" class="form-label">Ano de Fabricação</label>
-                <input type="number" class="form-control" id="ano" placeholder="Digite o ano de fabricação" required>
+                <input type="number" class="form-control" id="ano" name="ano" placeholder="Digite o ano de fabricação" required>
             </div>
             <button type="submit" class="btn btn-primary">Cadastrar</button>
         </form>

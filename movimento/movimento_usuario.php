@@ -9,8 +9,8 @@ try{
 $coman1do = $conexao->prepare('INSERT INTO usuario (usuario, senha) 
 VALUES (:usuario, :senha)');
 $comando->execute(array(
-':usuario'          => $nome_responsavel,
-':senha'            => $nome_fantasia
+':usuario'          => $usuario,
+':senha'            => $senha
 ));
 }
 

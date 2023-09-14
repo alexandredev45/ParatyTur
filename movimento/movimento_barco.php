@@ -9,13 +9,13 @@ $capacidade            = $_POST['capacidade'];
 $ano                   = $_POST['ano'];
 
 try{    
-$comando = $conexao->prepare('INSERT INTO produto (nome, proprietario, comprimento, capacidade, ano) 
+$comando = $conexao->prepare('INSERT INTO barco (nome, proprietario, comprimento, capacidade, ano) 
 VALUES(:nome, :proprietario, :comprimento, :capacidade, :ano)');
 $comando->execute(array(
 ':nome'                  => $nome,
-':proprietario'          => $valor,
-':comprimento'           => $quantidade,
-':capacidade'            => $obs,
+':proprietario'          => $proprietario,
+':comprimento'           => $comprimento,
+':capacidade'            => $capacidade,
 ':ano'                   => $ano
 ));
 }

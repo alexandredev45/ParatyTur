@@ -6,7 +6,7 @@
 
 $dbHost = 'localhost';
 $dbUsername = 'esocialu_dev';
-$dbPassword = ']Jkj{qKcDZ+.';
+$dbPassword = '#paraty556762';
 $dbName = 'esocialu_paratytur';
 
 $conexao = mysqli_connect($dbHost, $dbUsername, $dbPassword, $dbName);

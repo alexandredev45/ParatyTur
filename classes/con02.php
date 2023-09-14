@@ -2,7 +2,7 @@
 
 	$host = 'mysql:host=localhost;dbname=';
 	$user = "if0_35026416";
-	$senha = "vKnh76PQ7WtjAi";
+	$senha = "#paraty556762";
 	
 try{
 	$conexao = new PDO($host,$user,$senha);

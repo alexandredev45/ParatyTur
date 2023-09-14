@@ -1,5 +1,5 @@
 <?php 
-include_once("../classes/conexao.php");
+/*include_once("../classes/conexao.php");
 
 // Verificar conexão
 if ($conexao->connect_error) {
@@ -60,5 +60,5 @@ if (isset($_GET['editar'])) {
 } else {
     echo "Nenhum parceiro registrado." . $conexao->error;
 }
-$conexao->close();// Fechar a conexão com o banco de dados
+$conexao->close();// Fechar a conexão com o banco de dados*/
 ?>

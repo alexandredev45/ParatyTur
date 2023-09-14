@@ -1,5 +1,5 @@
 <?php 
-include_once("../classes/conexao.php");
+/*include_once("../classes/conexao.php");
 
 // Verificar conexão
 if ($conexao->connect_error) {
@@ -35,5 +35,5 @@ if ($resultado->num_rows > 0) {
 }
 
 // Fechar a conexão com o banco de dados
-$conexao->close();
+$conexao->close();*/
 ?>

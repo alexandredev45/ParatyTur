@@ -18,7 +18,6 @@ $comando->execute(array(
 ));
 }
 
-
 catch(PDOException $e) {
 echo 'Error: ' . $e->getMessage();
 }
@@ -31,7 +30,6 @@ if($cont == 1){
  }else{
   echo '<script>Alert(Erro em tentar registrar cadastro!!!);</script>';
 }
-
 
 ?>
 

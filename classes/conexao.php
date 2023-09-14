@@ -1,5 +1,6 @@
 <?php
 
+<<<<<<< Updated upstream
 
 $dbHost = 'localhost';
 $dbUsername = 'esocialu_dev';
@@ -7,6 +8,14 @@ $dbPassword = ']Jkj{qKcDZ+.';
 $dbName = 'esocialu_paratytur';
     
 $conexao = mysqli_connect($dbHost, $dbUsername, $dbPassword, $dbName);
+=======
+    $dbHost     = "localhost";
+    $dbUsername = "esocialu_dev";
+    $dbPassword = "]Jkj{qKcDZ+.";
+    $dbName     = "esocialu_paratytur";
+    
+    $conexao = mysqli_connect ($dbHost, $dbUsername,$dbPassword, $dbName);
+>>>>>>> Stashed changes
 
     // Verificar conexão
 if (!$conexao) {
@@ -30,7 +39,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Caso ocorra algum erro ao inserir as credenciais, exiba uma mensagem de erro.
         echo "Falha na conexão com o banco de dados: " . $conexao->error;
     }
-    // Fechar a conexão com o banco de dados
+        // Fechar a conexão com o banco de dados
 
 }
 mysqli_close($conexao);
@@ -52,7 +61,7 @@ mysqli_close($conexao);
     define('HOST', 'localhost');
     define('DBNAME', 'esocialu_ParatyTur');
     define('USER', 'esocialu_AlexandreDev45');
-    define('PASSWORD', '8416RWo{bXM-');
+    define('PASSWORD', '8416RWo{bXM-');files-group
 
     class Connect{
         protected $connection;

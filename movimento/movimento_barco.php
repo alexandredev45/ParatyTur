@@ -1,79 +1,38 @@
 <?php
-include_once("../classes/conexao.php");
 
-<<<<<<< Updated upstream
-    // VERIFICAR conexão
-if ($conexao->connect_error) {
-    die("Erro de conexão com o banco de dados: " . $conexao->connect_error);
+include_once "../classes/conexao.php";
+
+$nome                  = $_POST['nome'];
+$proprietario          = $_POST['proprietario'];
+$comprimento           = $_POST['comprimento'];
+$capacidade            = $_POST['capacidade'];
+$ano                   = $_POST['ano'];
+
+try{    
+$comando = $conexao->prepare('INSERT INTO produto (nome, proprietario, comprimento, capacidade, ano) 
+VALUES(:nome, :proprietario, :comprimento, :capacidade, :ano)');
+$comando->execute(array(
+':nome'                  => $nome,
+':proprietario'          => $valor,
+':comprimento'           => $quantidade,
+':capacidade'            => $obs,
+':ano'                   => $ano
+));
 }
-=======
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    //conexao com o banco
-    $host = "localhost";
-    $user = "root";
-    $senha = "";
-    $dbname = "ParatyTur";
->>>>>>> Stashed changes
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['cadastrar'])) {
-    $nome = $_POST['nome'];
-    $proprietario = $_POST['proprietario'];
-    $comprimento = $_POST['comprimento'];
-    $capacidade = $_POST['capacidade'];
-    $ano = $_POST['ano'];
 
-    //CADASTRAR novo barco
-    $mysql = "INSERT INTO `barco` (`nome`, `proprietario`, `comprimento`, `capacidade`, `ano`) VALUES ('$nome', '$proprietario', '$comprimento', '$capacidade', '$ano')";
-
-    if ($conexao->query($mysql) === TRUE){
-        echo "Seu barco foi registrado com sucesso."; // sucesso ao inserir o novo barco no banco de dados
-        exit();
-    } else {
-        echo "Ocorreu um erro ao registrar seu barco, por favor, verifique os valores inseridos e tente novamente." . $conexao->error; // erro ao inserir o barco no banco de dados
-    }
+catch(PDOException $e) {
+echo 'Error: ' . $e->getMessage();
 }
-<<<<<<< Updated upstream
 
-    //EXIBIR listas de barco para EDIÇÃO e EXCLUSÃO
-if (isset($_GET['editar'])) {
-    $id_barco = $_GET['editar'];
+$cont = $comando->rowCount();
 
-    $mysql = "SELECT * FROM `barco` WHERE `id_barco` = $id_barco";
-    $resultado = $conexao->query($mysql);
-
-    if ($resultado->num_rows > 0) {
-        echo "<table>";
-        echo "<tr><th>ID</th><th>Nome</th><th>Proprietário</th><th>Comprimento</th><th>Capacidade</th><th>Ano</th><th>Ações</th></tr>";
-    
-        while ($linha = $resultado->fetch_assoc()) {
-        echo "<tr>";
-        echo "<td>" . $linha['id_barco'] . "</td>";
-        echo "<td>" . $linha['nome'] . "</td>";
-        echo "<td>" . $linha['proprietario'] . "</td>";
-        echo "<td>" . $linha['comprimento'] . "</td>";
-        echo "<td>" . $linha['capacidade'] . "</td>";
-        echo "<td>" . $linha['ano'] . "</td>";
-        echo "<td><a href='?editar=" . $linha['id_barco'] . "'>Editar</a> | <a href='?excluir=" . $linha['id_barco'] . "'>Excluir</a></td>";
-        echo "</tr>";
-        }
-        echo "</table>";
-    }
-} elseif (isset($_GET['excluir'])) {
-    $id_barco = $_GET['excluir'];
-
-    $mysql = "DELETE FROM `barco` WHERE `id_barco` = $id_barco";
-
-    if ($conexao->query($mysql) === TRUE) {
-        echo "Barco excluído com sucesso.";
-        exit();
-    } else {
-        echo "Erro ao excluir o barco. Por favor, tente novamente. " . $conexao->error;
-    }
-} else {
-    echo "Nenhum barco registrado." . $conexao->error;
+if($cont == 1){
+  //header("Location:cadastro_produto.html");
+  echo '<script>Alert(Cliente Cadastrado Com Sucesso !!!);</script>'; //colocar alert no  js
+ }else{
+  echo '<script>Alert(Erro em tentar registrar cadastro!!!);</script>';
 }
-$conexao->close();// Fechar a conexão com o banco de dados
 
-=======
->>>>>>> Stashed changes
+
 ?>

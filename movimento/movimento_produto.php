@@ -1,4 +1,75 @@
 <?php
+
+include_once "../classes/conexao.php";
+
+$nome                  = $_POST['nome'];
+$valor                 = $_POST['valor'];
+$quantidade            = $_POST['quantidade'];
+$obs                   = $_POST['obs'];
+
+try{    
+$comando = $conexao->prepare('INSERT INTO produto (nome, valor, quantidade, obs) 
+VALUES(:nome, :valor, :quantidade, :obs)');
+$comando->execute(array(
+':nome'                  => $nome,
+':valor'                 => $valor,
+':quantidade'            => $quantidade,
+':obs'                   => $obs,
+));
+}
+
+
+catch(PDOException $e) {
+echo 'Error: ' . $e->getMessage();
+}
+
+$cont = $comando->rowCount();
+
+if($cont == 1){
+  //header("Location:cadastro_produto.html");
+  echo '<script>Alert(Cliente Cadastrado Com Sucesso !!!);</script>'; //colocar alert no  js
+ }else{
+  echo '<script>Alert(Erro em tentar registrar cadastro!!!);</script>';
+}
+
+
+?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 include_once("../classes/conexao.php");
 
     // VERIFICAR conexão
@@ -62,5 +133,5 @@ if (isset($_GET['editar'])){
 } else {
   echo "Produto não registrado. Por favor, tente novamente." . $conexao->error;
 }
-$conexao->close();
+$conexao->close();*/
 ?>

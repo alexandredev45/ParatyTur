@@ -1,36 +1,13 @@
-<?php
-    $dbHost     = "localhost";
-    $dbUsername = "root";
-    $dbPassword = "";
-    $dbName     = "paraty";
-    
-    $conexao = mysqli_connect ($dbHost, $dbUsername,$dbPassword, $dbName);
+<?php 
 
-    // Verificar conexão
-if (!$conexao) {
-    echo "" .mysqli_connect_error();
-}else{
-    echo "<h1>SUCESSO</h1>";
+$host = 'mysql:host=ns950.hostgator.com.br;dbname=esocialu_paratytur';
+$user = "esocialu_dev";
+$senha = "Hi~g$1X3#u6F";
+	
+try{
+	$conexao = new PDO($host,$user,$senha);
+}catch(PDOException $e){
+	print_r($e);
 }
-
-if (true) {
-    // Lógica de verificação de credenciais.
-    // Consulta SQL para inserir as credenciais no banco de dados.
-
-    $mysql = "INSERT INTO `usuario` (id_usuario, usuario, senha) VALUES (NULL, 'adm', '1234')";
-    
-    if ($conexao->query($mysql) === TRUE) {
-        // Credenciais inseridas com sucesso.
-        echo "Conexão feita com sucesso.";
-        //header("Location: tela_adm.php"); // Caso esteja tudo certo, redireciona para tela_adm.php
-        exit();
-    } else {
-        // Caso ocorra algum erro ao inserir as credenciais, exiba uma mensagem de erro.
-        echo "Falha na conexão com o banco de dados: " . $conexao->error;
-    }
-    // Fechar a conexão com o banco de dados
-
-}
-mysqli_close($conexao);
 
 ?>

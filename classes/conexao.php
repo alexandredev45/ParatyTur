@@ -1,21 +1,10 @@
 <?php
-
-<<<<<<< Updated upstream
     $dbHost     = "localhost";
-    $dbUsername = "esocialu_dev";
-    $dbPassword = "#paraty556762";
-    $dbName     = "esocialu_paratytur";
+    $dbUsername = "root";
+    $dbPassword = "";
+    $dbName     = "paraty";
     
     $conexao = mysqli_connect ($dbHost, $dbUsername,$dbPassword, $dbName);
-=======
-$host = 'sql302.infinityfree.com';
-$username = 'if0_35026416';
-$password = 'vKnh76PQ7WtjAi';
-$database = 'if0_35026416_paratytur';
-
-$conexao = mysqli_connect($host, $username, $password, $database);
->>>>>>> Stashed changes
-
 
     // Verificar conexão
 if (!$conexao) {

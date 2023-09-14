@@ -35,4 +35,11 @@ if($cont == 1){
 }
 
 
+//select
+
+//update
+
+//delete
+
+
 ?>

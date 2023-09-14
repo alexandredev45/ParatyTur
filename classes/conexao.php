@@ -1,12 +1,12 @@
 <?php
-//include_once("../classes/conexao.php");
 
-    ///$dbHost     = "localhost";
-    //$dbUsername = "esocialu_dev";
-    //$dbPassword = "]Jkj{qKcDZ+.";
-    //$dbName     = "esocialu_paratytur";
+
+$dbHost = 'localhost';
+$dbUsername = 'esocialu_dev';
+$dbPassword = ']Jkj{qKcDZ+.';
+$dbName = 'esocialu_paratytur';
     
-    $conexao = mysqli_connect ("mysql:host=localhost;dbname=", "if0_35026416", "vKnh76PQ7WtjAi", "esocialu_ParatyTur");
+$conexao = mysqli_connect($dbHost, $dbUsername, $dbPassword, $dbName);
 
     // Verificar conexão
 if (!$conexao) {

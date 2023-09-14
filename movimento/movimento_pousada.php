@@ -16,7 +16,7 @@ $valor_total            = $_POST['valor_total'];
 $desconto               = $_POST['desconto'];
 
 try{    
-$coman1do = $conexao->prepare('INSERT INTO produto (nome_responsavel, nome_fantasia, cnpj, email, telefone, rua, bairro, cidade, estado, credito, valor_total, desconto) 
+$coman1do = $conexao->prepare('INSERT INTO pousada (nome_responsavel, nome_fantasia, cnpj, email, telefone, rua, bairro, cidade, estado, credito, valor_total, desconto) 
 VALUES (:nome_responsavel, :nome_fantasia, :cnpj, :email, :telefone, :rua, :bairro, :cidade, :estado, :credito, valor_total, :desconto)');
 $comando->execute(array(
 ':nome_responsavel'          => $nome_responsavel,

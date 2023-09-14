@@ -3,19 +3,19 @@
 include_once "../classes/conexao.php";
 
 $nome               = $_POST['nome'];
-$local_             = $_POST['local_'];
+$partida            = $_POST['partida'];
 $duracao            = $_POST['duracao'];
 $valor              = $_POST['valor'];
 $descricao          = $_POST['descricao'];
 
 try{    
-$comando = $conexao->prepare('INSERT INTO produto (nome, local_, duracao, valor, descricao) 
-VALUES(:nome, :local_ :duracao, :valor, :descricao)');
+$comando = $conexao->prepare('INSERT INTO passeio (nome, partida, duracao, valor, descricao) 
+VALUES(:nome, :partida :duracao, :valor, :descricao)');
 $comando->execute(array(
 ':nome'             => $nome,
-':local_'           => $valor,
-':duracao'          => $quantidade,
-':valor'            => $obs,
+':partida'          => $partida,
+':duracao'          => $duracao,
+':valor'            => $valor,
 ':descricao'        => $descricao
 ));
 }

@@ -15,23 +15,23 @@
         <form action="movimento/movimento_passeio.php"  method="POST">
             <div class="mb-3">
                 <label for="nome" class="form-label">Nome do Passeio</label>
-                <input type="text" class="form-control" id="nome" placeholder="Digite o nome do passeio" required>
+                <input type="text" class="form-control" id="nome" name="nome" placeholder="Digite o nome do passeio" required>
             </div>
             <div class="mb-3">
                 <label for="local" class="form-label">Local do Passeio</label>
-                <input type="text" class="form-control" id="local_" placeholder="Digite o local do passeio" required>
+                <input type="text" class="form-control" id="local" name="local" placeholder="Digite o local do passeio" required>
             </div>
             <div class="mb-3">
                 <label for="nome" class="form-label">duraçäo do passeio</label>
-                <input type="text" class="form-control" id="duracao" placeholder="Digite a duração do passeio" required>
+                <input type="text" class="form-control" id="duracao" name="duracao" placeholder="Digite a duração do passeio" required>
             </div>
             <div class="mb-3">
                 <label for="nome" class="form-label">Valor</label>
-                <input type="text" class="form-control" id="valor" placeholder="Digite o valor do passeio" required>
+                <input type="text" class="form-control" id="valor" name="valor" placeholder="Digite o valor do passeio" required>
             </div>
             <div class="mb-3">
                 <label for="descricao" class="form-label">Descrição do Passeio</label>
-                <textarea class="form-control" id="descricao" rows="3" placeholder="Digite a descrição do passeio" required></textarea>
+                <textarea class="form-control" id="descricao" name="decricao" rows="3" placeholder="Digite a descrição do passeio" required></textarea>
             </div>
             <button type="submit" class="btn btn-primary">Cadastrar</button>
         </form>

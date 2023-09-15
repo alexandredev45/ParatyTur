@@ -33,6 +33,4 @@ if($cont == 1){
   echo '<script>Alert(Erro em tentar registrar cadastro!!!);</script>';
 }
 
-
-
 ?>

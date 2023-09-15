@@ -2,6 +2,10 @@
 
 include_once "../classes/conexao.php";
 
+$credito = "null";
+$valor_total = "null";
+$desconto = "null";
+
 $nome_responsavel       = $_POST['nome_responsavel'];
 $nome_fantasia          = $_POST['nome_fantasia'];
 $cnpj                   = $_POST['cnpj'];

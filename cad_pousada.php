@@ -35,7 +35,6 @@
                 <label for="nome" class="form-label">Telefone</label>
                 <input type="tel" class="form-control" id="telefone" name="telefone" placeholder="Digite seu telefone" required>
             </div>
-
             <div class="mb-3">
                 <label for="nome" class="form-label">Rua</label>
                 <input type="text" class="form-control" id="rua" name="rua" placeholder="Digite o nome da sua rua" required>

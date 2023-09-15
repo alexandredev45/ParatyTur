@@ -2,15 +2,15 @@
 
 include_once "../classes/conexao.php";
 
-$usuario       = $_POST['usuario'];
-$senha         = $_POST['senha'];
+$usuario        = $_POST['usuario'];
+$senha          = $_POST['senha'];
 
 try{    
-$coman1do = $conexao->prepare('INSERT INTO usuario (usuario, senha) 
-VALUES (:usuario, :senha)');
+$comando = $conexao->prepare('INSERT INTO usuario (usuario, senha) 
+VALUES(:usuario, :senha)');
 $comando->execute(array(
-':usuario'    => $usuario,
-':senha'      => $senha
+':usuario'        => $usuario,
+':senha'          => $senha
 ));
 }
 
@@ -28,6 +28,9 @@ if($cont == 1){
 }
 
 //select
+
+//$cmd = $pdo->prepare("SELECT * FROM barco");
+
 
 //update
 

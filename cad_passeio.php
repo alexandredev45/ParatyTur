@@ -22,7 +22,7 @@
                 <input type="text" class="form-control" id="local" name="partida" placeholder="Digite o local do passeio" required>
             </div>
             <div class="mb-3">
-                <label for="nome" class="form-label">duraçäo do passeio</label>
+                <label for="nome" class="form-label">Duraçäo do passeio</label>
                 <input type="text" class="form-control" id="duracao" name="duracao" placeholder="Digite a duração do passeio" required>
             </div>
             <div class="mb-3">

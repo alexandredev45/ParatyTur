@@ -10,7 +10,7 @@ $descricao          = $_POST['descricao'];
 
 try{    
 $comando = $conexao->prepare('INSERT INTO passeio (nome, partida, duracao, valor, descricao) 
-VALUES(:nome, :partida :duracao, :valor, :descricao)');
+VALUES(:nome, :partida, :duracao, :valor, :descricao)');
 $comando->execute(array(
 ':nome'             => $nome,
 ':partida'          => $partida,

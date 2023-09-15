@@ -35,6 +35,9 @@ if($cont == 1){
 
 //select
 
+//$cmd = $pdo->prepare("SELECT * FROM barco");
+
+
 //update
 
 //delete

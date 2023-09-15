@@ -5,7 +5,7 @@ try {
     $conexao = new PDO('mysql:host=ns950.hostgator.com.br;dbname=esocialu_paratytur', 'esocialu_dev', 'Hi~g$1X3#u6F');
     $conexao->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    if($_SERVER['REQUEST_METHOD'] === POST) {
+    if($_SERVER['REQUEST_METHOD'] === 'POST') {
         $usuario_digitado = $_POST['usuario'];
         $senha_digitada = $_POST['senha'];
 

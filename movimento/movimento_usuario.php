@@ -6,7 +6,7 @@ $usuario       = $_POST['usuario'];
 $senha         = $_POST['senha'];
 
 try{    
-$coman1do = $conexao->prepare('INSERT INTO usuario (usuario, senha) 
+$comando = $conexao->prepare('INSERT INTO usuario (usuario, senha) 
 VALUES (:usuario, :senha)');
 $comando->execute(array(
 ':usuario'    => $usuario,

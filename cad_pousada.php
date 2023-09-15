@@ -51,6 +51,14 @@
                 <label for="nome" class="form-label">Estado</label>
                 <input type="text" class="form-control" id="estado" name="estado" placeholder="Digite o nome do seu estado" required>
             </div>
+            <div class="mb-3">
+                <label for="nome" class="form-label">Credito</label>
+                <input type="text" class="form-control" id="credito" name="credito" placeholder="Digite o nome do seu estado">
+            </div>
+
+
+
+
             <button type="submit" class="btn btn-primary">Cadastrar</button>
         </form>
     </div>

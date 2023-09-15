@@ -1,4 +1,7 @@
 <?php 
+
+//verificar variaveis
+
 include_once("../classes/conexao.php");
 
 $id_venda       = $_POST['id_venda'];

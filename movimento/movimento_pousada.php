@@ -42,9 +42,9 @@ $cont = $comando->rowCount();
 
 if($cont == 1){
   //header("Location:cadastro_produto.html");
-  echo '<script>Alert(Cliente Cadastrado Com Sucesso !!!);</script>'; //colocar alert no  js
+  echo '<script>Alert(Pousada registrada com sucesso.);</script>'; //colocar alert no  js
  }else{
-  echo '<script>Alert(Erro em tentar registrar cadastro!!!);</script>';
+  echo '<script>Alert(Erro ao registrar pousada.);</script>';
 }
 
 //select

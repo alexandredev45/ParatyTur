@@ -12,27 +12,27 @@
 <body>
     <div class="container mt-5">
         <h1 class="mb-4">Agendar</h1>
-        <form action="movimento/movimento_barco.php" method="POST">
+        <form action="movimento/movimento_agenda.php" method="POST">
 
             <div class="mb-3">
                 <label for="nome" class="form-label">Nome Fantasia</label>
-                <input type="text" class="form-control" id="nome" name="nome" placeholder="Digite o nome da empresa" required>
+                <input type="text" class="form-control" id="nome" name="nome_fantasia" placeholder="Digite o nome da empresa" required>
             </div>
             <div class="mb-3">
                 <label for="nome" class="form-label">Data</label>
-                <input type="date" class="form-control" id="nome" name="nome" placeholder="Digite a data" required>
+                <input type="date" class="form-control" id="nome" name="dt" placeholder="Digite a data" required>
             </div>
             <div class="mb-3">
                 <label for="marca" class="form-label">Horario</label>
-                <input type="time" class="form-control" id="proprietario" name="proprietario" placeholder="Digite o horario" required>
+                <input type="time" class="form-control" id="proprietario" name="horario" placeholder="Digite o horario" required>
             </div>
             <div class="mb-3">
                 <label for="comprimento" class="form-label">Tempo</label>
-                <input type="text" class="form-control" id="comprimento" name="comprimento" placeholder="Digite o tempo" required>
+                <input type="text" class="form-control" id="comprimento" name="tempo" placeholder="Digite o tempo" required>
             </div>
             <div class="mb-3">
                 <label for="nome" class="form-label">Barco</label>
-                <input type="text" class="form-control" id="nome" name="nome" placeholder="Escolha o barco" required>
+                <input type="text" class="form-control" id="nome" name="barco" placeholder="Escolha o barco" required>
             </div>
             <button type="submit" class="btn btn-primary">Agendar</button>
         </form>

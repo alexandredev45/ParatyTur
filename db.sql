@@ -40,7 +40,7 @@ create table barco (
 
 create table agenda (
     id_agenda           int primary key identity,
-    dia                 varchar(50),
+    dt                  varchar(50),
     hora                varchar(50),
     tempo               varchar(50)
     --Chave barco--

@@ -1,7 +1,16 @@
 <?php 
 include_once("../classes/conexao.php");
 
+$id_venda       = $_POST['id_venda'];
+$id_pousada     = $_POST['id_pousada'];
+$nome_fantasia  = $_POST['nome_fantasia'];
+$id_passeio     = $_POST['id_passeio'];
+$id_barco       = $_POST['id_barco'];
+$id_produto     = $_POST['id_produto'];
+$id_agenda      = $_POST['id_agenda'];
+
 try {
+$conexao = new PDO('mysql:host=ns950.hostgator.com.br;dbname=esocialu_paratytur', $user, $senha);
 $conexao->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     
     //INNER JOIN para solicitar dados das chaves
@@ -12,9 +21,9 @@ $mysql = "SELECT v.id_venda, v.id_pousada, v.id_passeio, v.id_barco, v.id_produt
 $resultado = $conexao->prepare($mysql);
 $resultado->execute();
 
-if ($resultado->num_rows > 0) {
+if ($resultado->rowCount() > 0) {
     echo "<table>";
-    echo "<tr><th>Venda</th>Pousada</th><th>Nome Fantasia da Pousada</th><th>Passeio</th><th>Barco</th><th>Produto</th><th>Agenda</th></tr>";
+    echo "<tr><th>Venda</th><th>Pousada</th><th>Nome Fantasia da Pousada</th><th>Passeio</th><th>Barco</th><th>Produto</th><th>Agenda</th></tr>";
 
     while ($linha = $resultado->fetch(PDO::FETCH_ASSOC)) {
         echo "<tr>";

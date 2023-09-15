@@ -1,24 +1,39 @@
 <?php
 include_once("../classes/conexao.php");
 
-// Verificar conexão
-if ($conexao->connect_error) {
-    die("Erro de conexão com o banco de dados: " . $conexao->connect_error);
+try {
+    $conexao = new PDO('mysql:host=ns950.hostgator.com.br;dbname=esocialu_paratytur', 'esocialu_dev', 'Hi~g$1X3#u6F');
+    $conexao->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+    if($_SERVER['REQUEST_METHOD'] === POST) {
+        $usuario_digitado = $_POST['usuario'];
+        $senha_digitada = $_POST['senha'];
+
+        // Consulta SQL para verificar as credenciais do usuário
+        $mysql = "SELECT senha FROM `usuarios` WHERE usuario = :usuario";
+        $resultado = $conexao->prepare($mysql);
+        $resultado->bindParam(':usuario', $usuario_digitado);
+        $resultado->execute();
+
+        if ($resultado->rowCount() > 0) {
+            // Usuário encontrado no banco de dados
+            $linha = $resultado->fetch(PDO::FETCH_ASSOC);
+            $senha_hash = $linha['senha'];
+
+            if (password_verify($senha_digitada, $senha_hash)) {
+                header("Location: tela_adm.html");
+                exit();
+            } else {
+                header("Location: tela_login.php?erro=senha_incorreta");
+                exit();
+            }
+
+        } else {
+            header("Location: tela_login.php?erro=usuario_nao_encontrado");
+            exit();
+        }
+    }
+} catch (PDOException $e) {
+    echo "Erro: " . $e->getMessage();
 }
-
-if (($usuario_digitado === $usuario1 && $senha_digitada === $senha1) ||
-    ($usuario_digitado === $usuario2 && $senha_digitada === $senha2) ||
-    ($usuario_digitado === $usuario3 && $senha_digitada === $senha3)) {
-    // SE SIM: redireciona para a tela do administrador
-    header("Location: tela_adm.html");
-    exit();
-}if($usuario_digitado === /*usuario do db*/){
-    header("Location: tela_pousada.php");
-    exit();
-}else {
-    // SE NÃO: fecha sessao 
-}
-
-$conexao->close();
-
 ?>

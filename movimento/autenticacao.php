@@ -18,9 +18,9 @@ try {
         if ($resultado->rowCount() > 0) {
             // Usuário encontrado no banco de dados
             $linha = $resultado->fetch(PDO::FETCH_ASSOC);
-            $senha_hash = $linha['senha'];
+            $senhaHash = $linha['senha'];
 
-            if (password_verify($senha_digitada, $senha_hash)) {
+            if (password_verify($senha_digitada, $senhaHash)) {
                 header("Location: tela_adm.html");
                 exit();
             } else {

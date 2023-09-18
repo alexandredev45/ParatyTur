@@ -18,7 +18,7 @@
 </header>
 
 <?php 
-echo "usuario";
+echo "Usuario";
 ?>
 
 </body>

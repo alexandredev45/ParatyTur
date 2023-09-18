@@ -2,8 +2,8 @@
 include_once("../classes/conexao.php");
 
 try {
-    $conexao = new PDO('mysql:host=ns950.hostgator.com.br;dbname=esocialu_paratytur', 'esocialu_dev', 'Hi~g$1X3#u6F');
-    $conexao->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    //$conexao = new PDO('mysql:host=ns950.hostgator.com.br;dbname=esocialu_paratytur', 'esocialu_dev', 'Hi~g$1X3#u6F');
+    //$conexao->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     if($_SERVER['REQUEST_METHOD'] === 'POST') {
         $usuario_digitado = $_POST['usuario'];

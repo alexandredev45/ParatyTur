@@ -253,6 +253,7 @@
     list-style: none;
     margin-left: 0.5rem;
     font-weight: bold;
+    text-align: start;
 }
 #vantagens ul li i{
     color: chartreuse;
@@ -288,6 +289,7 @@
     font-size: 1.25rem;
     font-weight: bold;
     margin: 0.5rem;
+    text-align: start;
 }
 #list article ul li i{
     margin-right: 10px;

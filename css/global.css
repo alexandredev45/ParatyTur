@@ -3,3 +3,16 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    width: 100%;
+    background-color: rgba(0, 255, 255, 0.247);
+    
+}
+main{
+    max-width: 1440px;
+    background-color: aliceblue;
+    margin: 0 auto;
+}
+h1{
+    font-size: 0;
+}

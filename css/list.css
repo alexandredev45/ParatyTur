@@ -1,0 +1,43 @@
+#list{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    margin: 2rem 0;
+}
+#list article{
+    width: 70%;
+}
+
+#list h2{
+    color: #fff;
+    font-size: 2.75rem;
+}
+#list ul li{
+    list-style: none;
+    color: #fff;
+    font-size: 1.15rem;
+    font-weight: 500;
+    margin-top: 0.5rem;
+}
+
+#list ul li i{
+    color: chartreuse;
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+}
+
+#list div{
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 2rem;
+}
+
+#list div img {
+    width: 80%;
+    border: 1px solid #fff;
+    box-shadow: 15px 15px #fff;
+}

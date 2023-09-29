@@ -17,21 +17,18 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
 }
-
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--azul01);
+    background-color: #053d6e;
     color: white;
     padding: 0.5rem;
 }
-
 .logo img{
     width: 40px;
     margin-left: 2rem;
 }
-
 .menu-list {
     list-style: none;
     display: flex;

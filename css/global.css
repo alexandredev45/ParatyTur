@@ -5,12 +5,11 @@
 }
 body{
     width: 100%;
-    background-color: rgba(0, 255, 255, 0.247);
-    
+    background-color: #012340;
 }
 main{
     max-width: 1440px;
-    background-color: aliceblue;
+    background-color: #012340;
     margin: 0 auto;
 }
 h1{

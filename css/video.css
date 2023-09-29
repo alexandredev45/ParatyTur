@@ -75,6 +75,9 @@
         width: 90%;
         padding: 2rem;
     }
+    .box_img{
+        margin-left: 0;
+    }
 }
 
 /*IPHONE*/

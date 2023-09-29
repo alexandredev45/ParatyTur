@@ -37,9 +37,15 @@ body {
 
 .menu-list li a {
     text-decoration: none;
-    color: white;
-    font-size: 1.25rem;
+    color: #000;
+    font-size: 1.35rem;
     font-weight: bolder;
+}
+.menu-list li a:hover{
+    cursor: pointer;
+    color: #000;
+    font-weight: bold;
+    text-decoration: underline;
 }
 
 .hamburger {
@@ -59,7 +65,7 @@ body {
     .menu-list {
         display: none;
         flex-direction: column;
-        background-color: var(--azul01);
+        background-color: rgba(255, 255, 255, 0.255);
         position: absolute;
         top: 60px;
         left: 0;

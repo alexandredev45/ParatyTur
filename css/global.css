@@ -4,7 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Futura PT', sans-serif; 
+    font-family: 'futura', 'sans-serif'; 
 }
 body{
     width: 100%;
@@ -29,7 +29,7 @@ h1{
 
 /*IPAD*/
 
-@media only screen and (max-width: 1040px){}
+@media only screen and (max-width: 1024px){}
 
 /*IPHONE*/
 

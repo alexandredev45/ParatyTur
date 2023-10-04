@@ -1,7 +1,7 @@
 @import url('https://fonts.cdnfonts.com/css/futura-pt');
 
 #apresentacao{
-    width: 100%;
+    width: 97%;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -101,7 +101,7 @@
 
 @media only screen and (max-width: 600px){
     #apresentacao #bg_img{
-        width: 100%;
+        width: 95%;
         height: 20rem;
         background-image: url(../img/mapaNautico.png);
         background-size: 100%;

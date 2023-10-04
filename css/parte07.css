@@ -1,3 +1,37 @@
+#vantagens{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+#vantagens #box_barco{
+    width: 48%;
+    height: 40rem;
+    border: 1px solid black;
+    display: flex;
+}
+#vantagens article{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    border: 1px solid black;
+}
+#vantagens article h2{
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+#vantagens article p{
+    font-size: 1.25rem;
+}
+
+
+
+
+
+
+
 @media only screen and (max-width: 1680px){}
 
 /*LAPTOP*/

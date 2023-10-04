@@ -1,0 +1,76 @@
+#card{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: aliceblue;
+}
+#card #boxCard{
+    width: 100%;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 5rem;
+    margin-top: -15%;
+}
+#card #boxCard .card{
+    width: 25%;
+    height: 25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #fff;
+    padding: 2rem;
+    box-shadow: 5px 5px 20px #00000050;
+}
+#card #boxCard .card img{
+    width: 100px;
+    margin-bottom: 2rem;
+}
+#card #boxCard .card h2{
+    font-family: 'futura', 'sans-serif';
+    font-weight: bold;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+#card #boxCard .card p{
+    font-family: 'futura', 'sans-serif';
+    font-weight: 400;
+    margin-bottom: 2rem;
+    font-size: 1.25rem;
+    text-align: center;
+}
+#card #boxCard .card a{
+    width: 150px;
+    height: 50px;
+    background-color: #34b4d8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-decoration: none;
+    border: 1px solid transparent;
+    color: #fff;
+}
+#card #boxCard .card a:hover{
+    background-color: #34b4d8ad;
+    border: 1px solid #000;
+}
+#card span{
+    width: 100%;
+    height: 10rem;
+    margin: 0 -2px;
+    background-image: url(../img/faixa.png);
+    background-size: 130%;
+    background-size: cover;
+    rotate: 0.5deg;
+    padding: 2rem 0;
+}
+#card .img{
+    width: 100%;
+    height: 25rem;
+}

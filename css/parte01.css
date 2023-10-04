@@ -38,6 +38,9 @@
     border: 1px solid transparent;
     margin-left: 6rem;
     font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 #parte01 a:hover{
     background-color: #34b4d8ce;

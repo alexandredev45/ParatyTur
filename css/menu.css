@@ -1,32 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
-:root{
-    --azul02:    #07689f;
-    --amarelo02: #facf39;
-    --branco:    #ffffff;
-    --azul01:    #0988d0;
-    --azul03:    #05486e;
-    --amarelo01: #fbfb6b;
-}
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Futura PT', sans-serif; 
 }
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #053d6e;
     color: white;
     padding: 0.5rem;
+    border-bottom: 2px solid #fff;
+    background-image: url(../img/bg_menu.png);
 }
 .logo img{
-    width: 40px;
+    width: 50px;
     margin-left: 2rem;
 }
 .menu-list {

@@ -44,7 +44,7 @@ h1{
 
 [data-anime]{
     opacity: 0;
-    transition: 0.3s;
+    transition: 0.2s;
 }
 
 [data-anime="left"]{

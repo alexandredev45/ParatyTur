@@ -1,5 +1,68 @@
 footer{
     width: 100%;
-    height: 3rem;
-    border: 1px solid blueviolet;
+    height: 30rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(../img/bg_footer.png);
+    background-size: 100%;
+    background-position-y: center;
+    object-fit: cover;
 }
+footer .box_empresa{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0 10rem;
+    background-color: rgba(255, 255, 255, 0.644);
+    padding: 2rem;
+    margin-top: -8%;
+}
+footer .box_empresa img{
+    width: 400px;
+}
+#meio{
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+}
+
+footer .txt{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin-left: 10rem;
+}
+footer .txt img{
+    width: 200px;
+}
+footer .txt p{
+    font-size: 1.25rem;
+    color: #fff;
+}
+footer .contato{
+    width: 35%;
+    display: flex;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4rem;
+}
+footer .contato a{
+    text-decoration: none;
+    text-align: start;
+    color: #fff;
+    font-size: 1.5rem;
+    margin: 0.5rem;
+}
+
+
+
+

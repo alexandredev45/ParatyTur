@@ -2,24 +2,29 @@
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     margin: 4rem 0;
 }
 #vantagens #box_barco{
-    width: 48%;
-    height: 33rem;
+    width: 80%;
+    height: 35rem;
     display: flex;
 }
+#vantagens #box_barco img{
+    width: 100%;
+    object-fit: cover;
+}
 #vantagens article{
-    width: 50%;
+    width: 70%;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: start;
     padding: 2rem;
 }
 #vantagens article h2{
     font-size: 2.5rem;
     margin-bottom: 2rem;
+    margin-right: 8rem;
 }
 #vantagens article p{
     font-size: 1.25rem;
@@ -33,11 +38,9 @@
     font-size: 2rem;
     list-style: none;
     margin: 2rem 0;
-    margin-left: -10%;
 }
-
 #vantagens article ul li img{
-    width: 50px;
+    width: 60px;
 }
 
 
@@ -51,8 +54,82 @@
 
 /*IPAD*/
 
-@media only screen and (max-width: 1024px){}
+@media only screen and (max-width: 1024px){
+    #vantagens{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 4rem 0;
+    }
+    #vantagens #box_barco{
+        width: 0%;
+        height: 0rem;
+    }
+    #vantagens #box_barco img{
+        width: 0%;
+    }
+    #vantagens article{
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        padding: 2rem;
+    }
+    #vantagens article h2{
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+        margin-right: 0rem;
+    }
+    #vantagens article p{
+        font-size: 1.25rem;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+    }
+    #vantagens article ul li{
+        display: flex;
+        align-items: center;
+        font-size: 2rem;
+        list-style: none;
+        margin: 2rem 0;
+    }
+    #vantagens article ul li img{
+        width: 60px;
+    }
+}
 
 /*IPHONE*/
 
-@media only screen and (max-width: 600px){}
+@media only screen and (max-width: 600px){
+    #vantagens article{
+        width: 95%;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        padding: 2rem;
+        margin-top: -20%;
+    }
+    #vantagens article h2{
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        margin-right: 0rem;
+    }
+    #vantagens article p{
+        font-size: 1.1rem;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+    }
+    #vantagens article ul li{
+        display: flex;
+        align-items: center;
+        font-size: 1.5rem;
+        list-style: none;
+        margin: 2rem 0;
+    }
+    #vantagens article ul li img{
+        width: 40px;
+    }
+}

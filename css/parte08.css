@@ -3,7 +3,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 2rem 0;
 }
 #vtg h2{
     margin: 2rem 0;
@@ -20,7 +19,7 @@
 }
 #vtg video{
     width: 100%;
-    height: 35rem;
+    height: 38rem;
     object-fit: cover;
 }
 

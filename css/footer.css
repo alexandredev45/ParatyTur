@@ -10,7 +10,6 @@ footer{
     background-position-y: center;
     object-fit: cover;
 }
-
 footer .box_empresa{
     width: 80%;
     margin: 0 auto;
@@ -18,8 +17,9 @@ footer .box_empresa{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    margin-top: -3%;
+    margin-top: -4%;
     border: 2px solid #ccc;
+    padding: 2rem 0;
 }
 footer .box_empresa img{
     width: 300px;
@@ -51,13 +51,15 @@ footer #meio .contato{
     flex-direction: column;
     align-items: start;
 }
-footer #meio .contato a{
+footer #meio .contato h3{
     color: #fff;
     font-size: 1.5rem;
-    margin: 0.5rem;
+}
+footer #meio .contato a{
+    color: #fff;
+    font-size: 1.25rem;
     text-decoration: none;
 }
-
 footer #redes{
     width: 100%;
     display: flex;
@@ -66,7 +68,6 @@ footer #redes{
     padding: 1rem 0;
     border-top: 2px solid #fff;
 }
-
 footer #redes p{
     color: #fff;
     font-size: 1.25rem;
@@ -80,7 +81,6 @@ footer .redes{
 footer .redes a img{
     width: 20px;
 }
-
 @media only screen and (max-width: 600px){
     footer{
         background-image: url(../img/bg_footer02.png);
@@ -125,13 +125,15 @@ footer .redes a img{
         flex-direction: column;
         align-items: start;
     }
+    footer #meio .contato h3{
+        margin-left: -3rem;
+    }
     footer #meio .contato a{
         color: #fff;
         font-size: 1.5rem;
-        margin: 0.5rem;
         text-decoration: none;
+        margin-left: -3rem;
     }
-    
     footer #redes{
         width: 100%;
         display: flex;
@@ -140,7 +142,6 @@ footer .redes a img{
         border-top: 2px solid #fff;
         padding: 1rem;
     }
-    
     footer #redes p{
         color: #fff;
         font-size: 1.25rem;

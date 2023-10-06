@@ -4,65 +4,154 @@ footer{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
     background-image: url(../img/bg_footer.png);
     background-size: 100%;
     background-position-y: center;
     object-fit: cover;
 }
+
 footer .box_empresa{
     width: 80%;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.255);
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 0 10rem;
-    background-color: rgba(255, 255, 255, 0.644);
-    padding: 2rem;
-    margin-top: -8%;
+    justify-content: space-around;
+    margin-top: -3%;
+    border: 2px solid #ccc;
 }
 footer .box_empresa img{
-    width: 400px;
+    width: 300px;
 }
-#meio{
+footer #meio{
+    margin: 0 auto;
     width: 80%;
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: 2rem;
 }
-
-footer .txt{
-    width: 60%;
+footer #meio .txt{
+    width: 48%;
     display: flex;
     flex-direction: column;
     align-items: start;
-    margin-left: 10rem;
 }
-footer .txt img{
-    width: 200px;
+footer #meio .txt img{
+    width: 150px;
+    margin-bottom: 1rem;
 }
-footer .txt p{
-    font-size: 1.25rem;
+footer #meio .txt p{
     color: #fff;
+    font-size: 1.05rem;
 }
-footer .contato{
-    width: 35%;
-    display: flex;
-    align-items: center;
+footer #meio .contato{
+    width: 25%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 4rem;
+    align-items: start;
 }
-footer .contato a{
-    text-decoration: none;
-    text-align: start;
+footer #meio .contato a{
     color: #fff;
     font-size: 1.5rem;
     margin: 0.5rem;
+    text-decoration: none;
 }
 
+footer #redes{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1rem 0;
+    border-top: 2px solid #fff;
+}
 
+footer #redes p{
+    color: #fff;
+    font-size: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+footer .redes{
+    width: 200px;
+}
+footer .redes a img{
+    width: 20px;
+}
 
-
+@media only screen and (max-width: 600px){
+    footer{
+        background-image: url(../img/bg_footer02.png);
+        background-repeat: no-repeat;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: -15%;
+    }
+    footer .box_empresa{
+        width: 100%;
+        padding: 0 1rem;
+        background-color: transparent;
+        border: none;
+        margin-top: 0;
+    }
+    footer .box_empresa img{
+        width: 150px;
+    }
+    footer #meio{
+        width: 100%;
+    }
+    footer #meio .txt{
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        padding: 2rem;
+    }
+    footer #meio .txt img{
+        width: 120px;
+        margin-bottom: 1rem;
+    }
+    footer #meio .txt p{
+        color: #fff;
+        font-size: 1rem;
+    }
+    footer #meio .contato{
+        width: 25%;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+    footer #meio .contato a{
+        color: #fff;
+        font-size: 1.5rem;
+        margin: 0.5rem;
+        text-decoration: none;
+    }
+    
+    footer #redes{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-top: 2px solid #fff;
+        padding: 1rem;
+    }
+    
+    footer #redes p{
+        color: #fff;
+        font-size: 1.25rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    footer .redes{
+        width: 100px;
+    }
+    footer .redes a img{
+        width: 20px;
+    }
+}

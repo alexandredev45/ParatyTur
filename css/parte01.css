@@ -28,7 +28,7 @@
     font-weight: bolder;
 }
 #parte01 p{
-    font-family: 'futura pt', sans-serif;
+    font-family: 'Candal', sans-serif;
     font-size: 1.5rem;
     color: #fff;
     margin-bottom: 3rem;
@@ -86,5 +86,7 @@
     }
     #parte01 a{
         margin: 0;
+        height: 50px;
+        margin-top: 1rem;
     }
 }

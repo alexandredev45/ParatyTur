@@ -3,7 +3,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 2rem 0;
 }
 #video video{
     width: 100%;
@@ -39,7 +38,7 @@
 
 @media only screen and (max-width: 1024px){
     #video{
-        margin-top: -45%;
+        margin-top: -0%;
     }
     #video video{
         width: 100%;
@@ -52,7 +51,7 @@
 
 @media only screen and (max-width: 600px){
     #video{
-        margin-top: -65%;
+        margin-top: -0%;
     }
     #video video{
         width: 100%;

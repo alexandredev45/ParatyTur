@@ -1,7 +1,7 @@
 #empresa{
     width: 100%;
     display: flex;
-    align-items: start;
+    align-items: center;
     justify-content: center;
     margin: 2rem 0;
 }
@@ -21,19 +21,19 @@
     padding: 1rem 2rem;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: start;
 }
 #empresa article h2{
     font-family: 'futura', 'sans-serif';
-    font-size: 2.5rem;
-    margin: 2rem 0;
+    font-size: 2.3rem;
+    margin-bottom: 1rem;
     color: #34b4d8;
 }
 
 #empresa article p{
     font-family: 'futura', 'sans-serif';
-    font-size: 1.5rem;
-    
+    font-size: 1.25rem;
+    margin: 0.5rem 0;
 }
 
 
@@ -63,7 +63,8 @@
         padding: 1rem 2rem;
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: start;
+        justify-content: center;
         
     }
     #empresa article h2{
@@ -76,9 +77,8 @@
     #empresa article p{
         font-family: 'futura', 'sans-serif';
         font-size: 1.5rem;
-        margin-bottom: 0rem;
+        margin: 0.5rem 0 1rem 1rem;
         text-align: start;
-        margin-left: 1rem;
     }
     #empresa div{
         width: 100%;
